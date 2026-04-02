@@ -1,5 +1,11 @@
 `timescale 1ns / 1ps
 
+initial begin
+  $dumpfile("wave.vcd");
+  $dumpvars(0, testbench);
+end
+
+
 module tb_mini_light_up_game;
 
     // Signaux d'entrée (reg dans le testbench)
