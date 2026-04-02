@@ -5,7 +5,7 @@ module mini_light_up_game (
     output [6:0] segments, // Sortie vers le bus segments commun 
     output [3:0] digit_sel // Sélection de l'afficheur (Anodes/Cathodes)
 );
-
+    // coucou
     // --- 1. Traitement du bouton (Anti-rebond / Impulsion unique) ---
     // [cite: 19, 20]
     reg btn_prev;
