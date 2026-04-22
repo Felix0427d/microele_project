@@ -1,0 +1,6 @@
+{
+  "DESIGN_NAME": "button_game",
+  "VERILOG_FILES": ["dir::chip.v", "dir::testbench.v"],
+  "CLOCK_PERIOD": 25,
+  "CLOCK_PORT": "clk"
+}
