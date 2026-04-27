@@ -1,0 +1,5014 @@
+{
+  "version": 1,
+  "author": "GitHub Copilot",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-clock-generator",
+      "id": "clk1",
+      "top": -400,
+      "left": -900,
+      "attrs": {
+        "frequency": "3"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_lock",
+      "top": -400,
+      "left": -750,
+      "attrs": {
+        "color": "green",
+        "label": "LOCK",
+        "bounce": "0",
+        "key": "l"
+      }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn_reset",
+      "top": -400,
+      "left": -620,
+      "attrs": {
+        "color": "red",
+        "label": "RST",
+        "bounce": "0",
+        "key": "r"
+      }
+    },
+    {
+      "type": "wokwi-vcc",
+      "id": "vcc1",
+      "top": -470,
+      "left": -750,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-vcc",
+      "id": "vcc2",
+      "top": -470,
+      "left": -620,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd1",
+      "top": -310,
+      "left": -750,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd2",
+      "top": -310,
+      "left": -620,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_lock",
+      "top": -360,
+      "left": -750,
+      "rotate": 90,
+      "attrs": {
+        "value": "10000"
+      }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_rst",
+      "top": -360,
+      "left": -620,
+      "rotate": 90,
+      "attrs": {
+        "value": "10000"
+      }
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "not_rst",
+      "top": -390,
+      "left": -530,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "sr0",
+      "top": -300,
+      "left": -500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "sr1",
+      "top": -300,
+      "left": -350,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "sr2",
+      "top": -300,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "sr3",
+      "top": -300,
+      "left": -50,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "sr4",
+      "top": -300,
+      "left": 100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "sr5",
+      "top": -300,
+      "left": 250,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_sr0",
+      "top": -400,
+      "left": -490,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_sr1",
+      "top": -400,
+      "left": -340,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_sr2",
+      "top": -400,
+      "left": -190,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_sr3",
+      "top": -400,
+      "left": -40,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_sr4",
+      "top": -400,
+      "left": 110,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_sr5",
+      "top": -400,
+      "left": 260,
+      "attrs": {
+        "color": "yellow"
+      }
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_lsr0",
+      "top": -350,
+      "left": -476,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_lsr1",
+      "top": -350,
+      "left": -326,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_lsr2",
+      "top": -350,
+      "left": -176,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_lsr3",
+      "top": -350,
+      "left": -26,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_lsr4",
+      "top": -350,
+      "left": 124,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_lsr5",
+      "top": -350,
+      "left": 274,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_lock_sr0",
+      "top": -180,
+      "left": -500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_lock_sr1",
+      "top": -180,
+      "left": -350,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_lock_sr2",
+      "top": -180,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_lock_sr3",
+      "top": -180,
+      "left": -50,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_lock_sr4",
+      "top": -180,
+      "left": 100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_lock_sr5",
+      "top": -180,
+      "left": 250,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "cnt0",
+      "top": 50,
+      "left": -900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "cnt1",
+      "top": 50,
+      "left": -750,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "xor_cnt0",
+      "top": 150,
+      "left": -900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-xor-2",
+      "id": "xor_cnt1",
+      "top": 150,
+      "left": -750,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_cnt1_en",
+      "top": 200,
+      "left": -750,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "not_cnt0",
+      "top": 250,
+      "left": -900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "not_cnt1",
+      "top": 250,
+      "left": -750,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_sel0",
+      "top": 350,
+      "left": -900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_sel1",
+      "top": 350,
+      "left": -750,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_sel2",
+      "top": 350,
+      "left": -600,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_sel3",
+      "top": 350,
+      "left": -450,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_dig0",
+      "top": 280,
+      "left": -900,
+      "attrs": {
+        "color": "cyan"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_dig1",
+      "top": 280,
+      "left": -750,
+      "attrs": {
+        "color": "cyan"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_dig2",
+      "top": 280,
+      "left": -600,
+      "attrs": {
+        "color": "cyan"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_dig3",
+      "top": 280,
+      "left": -450,
+      "attrs": {
+        "color": "cyan"
+      }
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_ldig0",
+      "top": 330,
+      "left": -886,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_ldig1",
+      "top": 330,
+      "left": -736,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_ldig2",
+      "top": 330,
+      "left": -586,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_ldig3",
+      "top": 330,
+      "left": -436,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_wr_en0",
+      "top": 450,
+      "left": -900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_wr_en1",
+      "top": 450,
+      "left": -750,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_wr_en2",
+      "top": 450,
+      "left": -600,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_wr_en3",
+      "top": 450,
+      "left": -450,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx0a",
+      "top": 550,
+      "left": -1400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx0b",
+      "top": 550,
+      "left": -1300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx0c",
+      "top": 550,
+      "left": -1200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx0d",
+      "top": 550,
+      "left": -1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx0e",
+      "top": 550,
+      "left": -1000,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx0f",
+      "top": 550,
+      "left": -900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx0g",
+      "top": 550,
+      "left": -800,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx1a",
+      "top": 550,
+      "left": -700,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx1b",
+      "top": 550,
+      "left": -600,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx1c",
+      "top": 550,
+      "left": -500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx1d",
+      "top": 550,
+      "left": -400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx1e",
+      "top": 550,
+      "left": -300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx1f",
+      "top": 550,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx1g",
+      "top": 550,
+      "left": -100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx2a",
+      "top": 550,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx2b",
+      "top": 550,
+      "left": 100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx2c",
+      "top": 550,
+      "left": 200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx2d",
+      "top": 550,
+      "left": 300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx2e",
+      "top": 550,
+      "left": 400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx2f",
+      "top": 550,
+      "left": 500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx2g",
+      "top": 550,
+      "left": 600,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx3a",
+      "top": 550,
+      "left": 700,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx3b",
+      "top": 550,
+      "left": 800,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx3c",
+      "top": 550,
+      "left": 900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx3d",
+      "top": 550,
+      "left": 1000,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx3e",
+      "top": 550,
+      "left": 1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx3f",
+      "top": 550,
+      "left": 1200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-mux-2",
+      "id": "mx3g",
+      "top": 550,
+      "left": 1300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem0a",
+      "top": 700,
+      "left": -1400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem0b",
+      "top": 700,
+      "left": -1300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem0c",
+      "top": 700,
+      "left": -1200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem0d",
+      "top": 700,
+      "left": -1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem0e",
+      "top": 700,
+      "left": -1000,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem0f",
+      "top": 700,
+      "left": -900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem0g",
+      "top": 700,
+      "left": -800,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem1a",
+      "top": 700,
+      "left": -700,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem1b",
+      "top": 700,
+      "left": -600,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem1c",
+      "top": 700,
+      "left": -500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem1d",
+      "top": 700,
+      "left": -400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem1e",
+      "top": 700,
+      "left": -300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem1f",
+      "top": 700,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem1g",
+      "top": 700,
+      "left": -100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem2a",
+      "top": 700,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem2b",
+      "top": 700,
+      "left": 100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem2c",
+      "top": 700,
+      "left": 200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem2d",
+      "top": 700,
+      "left": 300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem2e",
+      "top": 700,
+      "left": 400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem2f",
+      "top": 700,
+      "left": 500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem2g",
+      "top": 700,
+      "left": 600,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem3a",
+      "top": 700,
+      "left": 700,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem3b",
+      "top": 700,
+      "left": 800,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem3c",
+      "top": 700,
+      "left": 900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem3d",
+      "top": 700,
+      "left": 1000,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem3e",
+      "top": 700,
+      "left": 1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem3f",
+      "top": 700,
+      "left": 1200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "mem3g",
+      "top": 700,
+      "left": 1300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done0_ab",
+      "top": 1200,
+      "left": -1400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done0_cd",
+      "top": 1200,
+      "left": -1300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done0_ef",
+      "top": 1200,
+      "left": -1200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "not_done0_g",
+      "top": 1200,
+      "left": -1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done0_abcd",
+      "top": 1300,
+      "left": -1400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done0_efg",
+      "top": 1300,
+      "left": -1250,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done0",
+      "top": 1400,
+      "left": -1330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done1_ab",
+      "top": 1200,
+      "left": -900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done1_cd",
+      "top": 1200,
+      "left": -800,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done1_ef",
+      "top": 1200,
+      "left": -700,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "not_done1_g",
+      "top": 1200,
+      "left": -600,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done1_abcd",
+      "top": 1300,
+      "left": -900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done1_efg",
+      "top": 1300,
+      "left": -750,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done1",
+      "top": 1400,
+      "left": -830,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done2_ab",
+      "top": 1200,
+      "left": -400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done2_cd",
+      "top": 1200,
+      "left": -300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done2_ef",
+      "top": 1200,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "not_done2_g",
+      "top": 1200,
+      "left": -100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done2_abcd",
+      "top": 1300,
+      "left": -400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done2_efg",
+      "top": 1300,
+      "left": -250,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done2",
+      "top": 1400,
+      "left": -330,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done3_ab",
+      "top": 1200,
+      "left": 100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done3_cd",
+      "top": 1200,
+      "left": 200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done3_ef",
+      "top": 1200,
+      "left": 300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "not_done3_g",
+      "top": 1200,
+      "left": 400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done3_abcd",
+      "top": 1300,
+      "left": 100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done3_efg",
+      "top": 1300,
+      "left": 250,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done3",
+      "top": 1400,
+      "left": 170,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "done_ff0",
+      "top": 1550,
+      "left": -1400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "done_ff1",
+      "top": 1550,
+      "left": -1250,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "done_ff2",
+      "top": 1550,
+      "left": -1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "done_ff3",
+      "top": 1550,
+      "left": -950,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_done0",
+      "top": 1650,
+      "left": -1400,
+      "attrs": {
+        "color": "limegreen"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_done1",
+      "top": 1650,
+      "left": -1250,
+      "attrs": {
+        "color": "limegreen"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_done2",
+      "top": 1650,
+      "left": -1100,
+      "attrs": {
+        "color": "limegreen"
+      }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led_done3",
+      "top": 1650,
+      "left": -950,
+      "attrs": {
+        "color": "limegreen"
+      }
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_ldone0",
+      "top": 1700,
+      "left": -1386,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_ldone1",
+      "top": 1700,
+      "left": -1236,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_ldone2",
+      "top": 1700,
+      "left": -1086,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_ldone3",
+      "top": 1700,
+      "left": -936,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "seg0",
+      "top": -100,
+      "left": 500,
+      "attrs": {
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "seg1",
+      "top": -100,
+      "left": 700,
+      "attrs": {
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "seg2",
+      "top": -100,
+      "left": 900,
+      "attrs": {
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-7segment",
+      "id": "seg3",
+      "top": -100,
+      "left": 1100,
+      "attrs": {
+        "common": "cathode"
+      }
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_sr0_init",
+      "top": -350,
+      "left": -500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_0a",
+      "top": 475,
+      "left": -1400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_0b",
+      "top": 475,
+      "left": -1300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_0c",
+      "top": 475,
+      "left": -1200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_0d",
+      "top": 475,
+      "left": -1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_0e",
+      "top": 475,
+      "left": -1000,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_0f",
+      "top": 475,
+      "left": -900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_1a",
+      "top": 475,
+      "left": -700,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_1b",
+      "top": 475,
+      "left": -600,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_1c",
+      "top": 475,
+      "left": -500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_1d",
+      "top": 475,
+      "left": -400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_1e",
+      "top": 475,
+      "left": -300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_1f",
+      "top": 475,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_2a",
+      "top": 475,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_2b",
+      "top": 475,
+      "left": 100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_2c",
+      "top": 475,
+      "left": 200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_2d",
+      "top": 475,
+      "left": 300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_2e",
+      "top": 475,
+      "left": 400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_2f",
+      "top": 475,
+      "left": 500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_3a",
+      "top": 475,
+      "left": 700,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_3b",
+      "top": 475,
+      "left": 800,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_3c",
+      "top": 475,
+      "left": 900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_3d",
+      "top": 475,
+      "left": 1000,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_3e",
+      "top": 475,
+      "left": 1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_write_3f",
+      "top": 475,
+      "left": 1200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done_sel0",
+      "top": 1450,
+      "left": -1400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done_sel1",
+      "top": 1450,
+      "left": -1250,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done_sel2",
+      "top": 1450,
+      "left": -1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_done_sel3",
+      "top": 1450,
+      "left": -950,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_done_01",
+      "top": 1500,
+      "left": -1400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_done_23",
+      "top": 1500,
+      "left": -1250,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_done_active",
+      "top": 1550,
+      "left": -1325,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_mx0g",
+      "top": 525,
+      "left": -800,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_mx1g",
+      "top": 525,
+      "left": -100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_mx2g",
+      "top": 525,
+      "left": 600,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_mx3g",
+      "top": 525,
+      "left": 1300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_com0",
+      "top": 50,
+      "left": 500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_com1",
+      "top": 50,
+      "left": 700,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_com2",
+      "top": 50,
+      "left": 900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gnd",
+      "id": "gnd_com3",
+      "top": 50,
+      "left": 1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_0a",
+      "top": 850,
+      "left": -1400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_0a",
+      "top": 950,
+      "left": -1400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_0b",
+      "top": 850,
+      "left": -1300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_0b",
+      "top": 950,
+      "left": -1300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_0c",
+      "top": 850,
+      "left": -1200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_0c",
+      "top": 950,
+      "left": -1200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_0d",
+      "top": 850,
+      "left": -1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_0d",
+      "top": 950,
+      "left": -1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_0e",
+      "top": 850,
+      "left": -1000,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_0e",
+      "top": 950,
+      "left": -1000,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_0f",
+      "top": 850,
+      "left": -900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_0f",
+      "top": 950,
+      "left": -900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_1a",
+      "top": 850,
+      "left": -700,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_1a",
+      "top": 950,
+      "left": -700,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_1b",
+      "top": 850,
+      "left": -600,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_1b",
+      "top": 950,
+      "left": -600,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_1c",
+      "top": 850,
+      "left": -500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_1c",
+      "top": 950,
+      "left": -500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_1d",
+      "top": 850,
+      "left": -400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_1d",
+      "top": 950,
+      "left": -400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_1e",
+      "top": 850,
+      "left": -300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_1e",
+      "top": 950,
+      "left": -300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_1f",
+      "top": 850,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_1f",
+      "top": 950,
+      "left": -200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_2a",
+      "top": 850,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_2a",
+      "top": 950,
+      "left": 0,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_2b",
+      "top": 850,
+      "left": 100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_2b",
+      "top": 950,
+      "left": 100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_2c",
+      "top": 850,
+      "left": 200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_2c",
+      "top": 950,
+      "left": 200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_2d",
+      "top": 850,
+      "left": 300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_2d",
+      "top": 950,
+      "left": 300,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_2e",
+      "top": 850,
+      "left": 400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_2e",
+      "top": 950,
+      "left": 400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_2f",
+      "top": 850,
+      "left": 500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_2f",
+      "top": 950,
+      "left": 500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_3a",
+      "top": 850,
+      "left": 700,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_3a",
+      "top": 950,
+      "left": 700,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_3b",
+      "top": 850,
+      "left": 800,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_3b",
+      "top": 950,
+      "left": 800,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_3c",
+      "top": 850,
+      "left": 900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_3c",
+      "top": 950,
+      "left": 900,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_3d",
+      "top": 850,
+      "left": 1000,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_3d",
+      "top": 950,
+      "left": 1000,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_3e",
+      "top": 850,
+      "left": 1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_3e",
+      "top": 950,
+      "left": 1100,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_disp_3f",
+      "top": 850,
+      "left": 1200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-or-2",
+      "id": "or_disp_3f",
+      "top": 950,
+      "left": 1200,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_cnt_max",
+      "top": 1650,
+      "left": -1500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "not_cnt_max",
+      "top": 1700,
+      "left": -1500,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_cnt_adv_a",
+      "top": 1650,
+      "left": -1400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_cnt_adv_b",
+      "top": 1700,
+      "left": -1400,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-flip-flop-d",
+      "id": "btn_lock_ff",
+      "top": -450,
+      "left": -660,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-not",
+      "id": "not_btn_lock_prev",
+      "top": -480,
+      "left": -590,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gate-and-2",
+      "id": "and_btn_pulse",
+      "top": -500,
+      "left": -530,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [
+      "vcc1:VCC",
+      "btn_lock:1.l",
+      "red",
+      []
+    ],
+    [
+      "btn_lock:2.r",
+      "r_lock:1",
+      "green",
+      []
+    ],
+    [
+      "r_lock:2",
+      "gnd1:GND",
+      "black",
+      []
+    ],
+    [
+      "vcc2:VCC",
+      "btn_reset:1.l",
+      "red",
+      []
+    ],
+    [
+      "btn_reset:2.r",
+      "r_rst:1",
+      "green",
+      []
+    ],
+    [
+      "r_rst:2",
+      "gnd2:GND",
+      "black",
+      []
+    ],
+    [
+      "r_rst:1",
+      "not_rst:IN",
+      "orange",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "sr0:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "sr1:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "sr2:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "sr3:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "sr4:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "sr5:CLK",
+      "white",
+      []
+    ],
+    [
+      "sr0:Q",
+      "sr1:D",
+      "yellow",
+      []
+    ],
+    [
+      "sr1:Q",
+      "sr2:D",
+      "yellow",
+      []
+    ],
+    [
+      "sr2:Q",
+      "sr3:D",
+      "yellow",
+      []
+    ],
+    [
+      "sr3:Q",
+      "sr4:D",
+      "yellow",
+      []
+    ],
+    [
+      "sr4:Q",
+      "sr5:D",
+      "yellow",
+      []
+    ],
+    [
+      "sr0:Q",
+      "led_sr0:A",
+      "yellow",
+      []
+    ],
+    [
+      "led_sr0:C",
+      "gnd_lsr0:GND",
+      "black",
+      []
+    ],
+    [
+      "sr1:Q",
+      "led_sr1:A",
+      "yellow",
+      []
+    ],
+    [
+      "led_sr1:C",
+      "gnd_lsr1:GND",
+      "black",
+      []
+    ],
+    [
+      "sr2:Q",
+      "led_sr2:A",
+      "yellow",
+      []
+    ],
+    [
+      "led_sr2:C",
+      "gnd_lsr2:GND",
+      "black",
+      []
+    ],
+    [
+      "sr3:Q",
+      "led_sr3:A",
+      "yellow",
+      []
+    ],
+    [
+      "led_sr3:C",
+      "gnd_lsr3:GND",
+      "black",
+      []
+    ],
+    [
+      "sr4:Q",
+      "led_sr4:A",
+      "yellow",
+      []
+    ],
+    [
+      "led_sr4:C",
+      "gnd_lsr4:GND",
+      "black",
+      []
+    ],
+    [
+      "sr5:Q",
+      "led_sr5:A",
+      "yellow",
+      []
+    ],
+    [
+      "led_sr5:C",
+      "gnd_lsr5:GND",
+      "black",
+      []
+    ],
+    [
+      "sr0:Q",
+      "and_lock_sr0:A",
+      "yellow",
+      []
+    ],
+    [
+      "sr1:Q",
+      "and_lock_sr1:A",
+      "yellow",
+      []
+    ],
+    [
+      "sr2:Q",
+      "and_lock_sr2:A",
+      "yellow",
+      []
+    ],
+    [
+      "sr3:Q",
+      "and_lock_sr3:A",
+      "yellow",
+      []
+    ],
+    [
+      "sr4:Q",
+      "and_lock_sr4:A",
+      "yellow",
+      []
+    ],
+    [
+      "sr5:Q",
+      "and_lock_sr5:A",
+      "yellow",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "cnt0:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "cnt1:CLK",
+      "white",
+      []
+    ],
+    [
+      "cnt0:Q",
+      "xor_cnt0:A",
+      "cyan",
+      []
+    ],
+    [
+      "xor_cnt0:OUT",
+      "cnt0:D",
+      "cyan",
+      []
+    ],
+    [
+      "cnt0:Q",
+      "and_cnt1_en:A",
+      "cyan",
+      []
+    ],
+    [
+      "cnt1:Q",
+      "xor_cnt1:A",
+      "cyan",
+      []
+    ],
+    [
+      "and_cnt1_en:OUT",
+      "xor_cnt1:B",
+      "cyan",
+      []
+    ],
+    [
+      "xor_cnt1:OUT",
+      "cnt1:D",
+      "cyan",
+      []
+    ],
+    [
+      "cnt0:Q",
+      "not_cnt0:IN",
+      "cyan",
+      []
+    ],
+    [
+      "cnt1:Q",
+      "not_cnt1:IN",
+      "cyan",
+      []
+    ],
+    [
+      "not_cnt1:OUT",
+      "and_sel0:A",
+      "cyan",
+      []
+    ],
+    [
+      "not_cnt0:OUT",
+      "and_sel0:B",
+      "cyan",
+      []
+    ],
+    [
+      "not_cnt1:OUT",
+      "and_sel1:A",
+      "cyan",
+      []
+    ],
+    [
+      "cnt0:Q",
+      "and_sel1:B",
+      "cyan",
+      []
+    ],
+    [
+      "cnt1:Q",
+      "and_sel2:A",
+      "cyan",
+      []
+    ],
+    [
+      "not_cnt0:OUT",
+      "and_sel2:B",
+      "cyan",
+      []
+    ],
+    [
+      "cnt1:Q",
+      "and_sel3:A",
+      "cyan",
+      []
+    ],
+    [
+      "cnt0:Q",
+      "and_sel3:B",
+      "cyan",
+      []
+    ],
+    [
+      "and_sel0:OUT",
+      "led_dig0:A",
+      "cyan",
+      []
+    ],
+    [
+      "led_dig0:C",
+      "gnd_ldig0:GND",
+      "black",
+      []
+    ],
+    [
+      "and_sel1:OUT",
+      "led_dig1:A",
+      "cyan",
+      []
+    ],
+    [
+      "led_dig1:C",
+      "gnd_ldig1:GND",
+      "black",
+      []
+    ],
+    [
+      "and_sel2:OUT",
+      "led_dig2:A",
+      "cyan",
+      []
+    ],
+    [
+      "led_dig2:C",
+      "gnd_ldig2:GND",
+      "black",
+      []
+    ],
+    [
+      "and_sel3:OUT",
+      "led_dig3:A",
+      "cyan",
+      []
+    ],
+    [
+      "led_dig3:C",
+      "gnd_ldig3:GND",
+      "black",
+      []
+    ],
+    [
+      "and_sel0:OUT",
+      "and_wr_en0:A",
+      "cyan",
+      []
+    ],
+    [
+      "and_sel1:OUT",
+      "and_wr_en1:A",
+      "cyan",
+      []
+    ],
+    [
+      "and_sel2:OUT",
+      "and_wr_en2:A",
+      "cyan",
+      []
+    ],
+    [
+      "and_sel3:OUT",
+      "and_wr_en3:A",
+      "cyan",
+      []
+    ],
+    [
+      "mem0a:Q",
+      "mx0a:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en0:OUT",
+      "mx0a:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx0a:OUT",
+      "mem0a:D",
+      "lime",
+      []
+    ],
+    [
+      "mem0b:Q",
+      "mx0b:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en0:OUT",
+      "mx0b:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx0b:OUT",
+      "mem0b:D",
+      "lime",
+      []
+    ],
+    [
+      "mem0c:Q",
+      "mx0c:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en0:OUT",
+      "mx0c:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx0c:OUT",
+      "mem0c:D",
+      "lime",
+      []
+    ],
+    [
+      "mem0d:Q",
+      "mx0d:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en0:OUT",
+      "mx0d:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx0d:OUT",
+      "mem0d:D",
+      "lime",
+      []
+    ],
+    [
+      "mem0e:Q",
+      "mx0e:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en0:OUT",
+      "mx0e:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx0e:OUT",
+      "mem0e:D",
+      "lime",
+      []
+    ],
+    [
+      "mem0f:Q",
+      "mx0f:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en0:OUT",
+      "mx0f:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx0f:OUT",
+      "mem0f:D",
+      "lime",
+      []
+    ],
+    [
+      "mem0g:Q",
+      "mx0g:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en0:OUT",
+      "mx0g:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx0g:OUT",
+      "mem0g:D",
+      "lime",
+      []
+    ],
+    [
+      "mem1a:Q",
+      "mx1a:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en1:OUT",
+      "mx1a:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx1a:OUT",
+      "mem1a:D",
+      "lime",
+      []
+    ],
+    [
+      "mem1b:Q",
+      "mx1b:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en1:OUT",
+      "mx1b:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx1b:OUT",
+      "mem1b:D",
+      "lime",
+      []
+    ],
+    [
+      "mem1c:Q",
+      "mx1c:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en1:OUT",
+      "mx1c:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx1c:OUT",
+      "mem1c:D",
+      "lime",
+      []
+    ],
+    [
+      "mem1d:Q",
+      "mx1d:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en1:OUT",
+      "mx1d:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx1d:OUT",
+      "mem1d:D",
+      "lime",
+      []
+    ],
+    [
+      "mem1e:Q",
+      "mx1e:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en1:OUT",
+      "mx1e:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx1e:OUT",
+      "mem1e:D",
+      "lime",
+      []
+    ],
+    [
+      "mem1f:Q",
+      "mx1f:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en1:OUT",
+      "mx1f:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx1f:OUT",
+      "mem1f:D",
+      "lime",
+      []
+    ],
+    [
+      "mem1g:Q",
+      "mx1g:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en1:OUT",
+      "mx1g:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx1g:OUT",
+      "mem1g:D",
+      "lime",
+      []
+    ],
+    [
+      "mem2a:Q",
+      "mx2a:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en2:OUT",
+      "mx2a:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx2a:OUT",
+      "mem2a:D",
+      "lime",
+      []
+    ],
+    [
+      "mem2b:Q",
+      "mx2b:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en2:OUT",
+      "mx2b:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx2b:OUT",
+      "mem2b:D",
+      "lime",
+      []
+    ],
+    [
+      "mem2c:Q",
+      "mx2c:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en2:OUT",
+      "mx2c:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx2c:OUT",
+      "mem2c:D",
+      "lime",
+      []
+    ],
+    [
+      "mem2d:Q",
+      "mx2d:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en2:OUT",
+      "mx2d:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx2d:OUT",
+      "mem2d:D",
+      "lime",
+      []
+    ],
+    [
+      "mem2e:Q",
+      "mx2e:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en2:OUT",
+      "mx2e:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx2e:OUT",
+      "mem2e:D",
+      "lime",
+      []
+    ],
+    [
+      "mem2f:Q",
+      "mx2f:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en2:OUT",
+      "mx2f:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx2f:OUT",
+      "mem2f:D",
+      "lime",
+      []
+    ],
+    [
+      "mem2g:Q",
+      "mx2g:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en2:OUT",
+      "mx2g:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx2g:OUT",
+      "mem2g:D",
+      "lime",
+      []
+    ],
+    [
+      "mem3a:Q",
+      "mx3a:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en3:OUT",
+      "mx3a:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx3a:OUT",
+      "mem3a:D",
+      "lime",
+      []
+    ],
+    [
+      "mem3b:Q",
+      "mx3b:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en3:OUT",
+      "mx3b:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx3b:OUT",
+      "mem3b:D",
+      "lime",
+      []
+    ],
+    [
+      "mem3c:Q",
+      "mx3c:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en3:OUT",
+      "mx3c:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx3c:OUT",
+      "mem3c:D",
+      "lime",
+      []
+    ],
+    [
+      "mem3d:Q",
+      "mx3d:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en3:OUT",
+      "mx3d:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx3d:OUT",
+      "mem3d:D",
+      "lime",
+      []
+    ],
+    [
+      "mem3e:Q",
+      "mx3e:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en3:OUT",
+      "mx3e:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx3e:OUT",
+      "mem3e:D",
+      "lime",
+      []
+    ],
+    [
+      "mem3f:Q",
+      "mx3f:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en3:OUT",
+      "mx3f:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx3f:OUT",
+      "mem3f:D",
+      "lime",
+      []
+    ],
+    [
+      "mem3g:Q",
+      "mx3g:A",
+      "lime",
+      []
+    ],
+    [
+      "and_wr_en3:OUT",
+      "mx3g:SEL",
+      "cyan",
+      []
+    ],
+    [
+      "mx3g:OUT",
+      "mem3g:D",
+      "lime",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem0a:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem0b:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem0c:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem0d:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem0e:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem0f:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem0g:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem1a:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem1b:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem1c:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem1d:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem1e:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem1f:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem1g:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem2a:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem2b:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem2c:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem2d:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem2e:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem2f:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem2g:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem3a:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem3b:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem3c:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem3d:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem3e:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem3f:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "mem3g:CLK",
+      "white",
+      []
+    ],
+    [
+      "mem0g:Q",
+      "not_done0_g:IN",
+      "lime",
+      []
+    ],
+    [
+      "and_done0_ab:OUT",
+      "and_done0_abcd:A",
+      "lime",
+      []
+    ],
+    [
+      "and_done0_cd:OUT",
+      "and_done0_abcd:B",
+      "lime",
+      []
+    ],
+    [
+      "and_done0_ef:OUT",
+      "and_done0_efg:A",
+      "lime",
+      []
+    ],
+    [
+      "not_done0_g:OUT",
+      "and_done0_efg:B",
+      "lime",
+      []
+    ],
+    [
+      "and_done0_abcd:OUT",
+      "and_done0:A",
+      "lime",
+      []
+    ],
+    [
+      "and_done0_efg:OUT",
+      "and_done0:B",
+      "lime",
+      []
+    ],
+    [
+      "mem1g:Q",
+      "not_done1_g:IN",
+      "lime",
+      []
+    ],
+    [
+      "and_done1_ab:OUT",
+      "and_done1_abcd:A",
+      "lime",
+      []
+    ],
+    [
+      "and_done1_cd:OUT",
+      "and_done1_abcd:B",
+      "lime",
+      []
+    ],
+    [
+      "and_done1_ef:OUT",
+      "and_done1_efg:A",
+      "lime",
+      []
+    ],
+    [
+      "not_done1_g:OUT",
+      "and_done1_efg:B",
+      "lime",
+      []
+    ],
+    [
+      "and_done1_abcd:OUT",
+      "and_done1:A",
+      "lime",
+      []
+    ],
+    [
+      "and_done1_efg:OUT",
+      "and_done1:B",
+      "lime",
+      []
+    ],
+    [
+      "mem2g:Q",
+      "not_done2_g:IN",
+      "lime",
+      []
+    ],
+    [
+      "and_done2_ab:OUT",
+      "and_done2_abcd:A",
+      "lime",
+      []
+    ],
+    [
+      "and_done2_cd:OUT",
+      "and_done2_abcd:B",
+      "lime",
+      []
+    ],
+    [
+      "and_done2_ef:OUT",
+      "and_done2_efg:A",
+      "lime",
+      []
+    ],
+    [
+      "not_done2_g:OUT",
+      "and_done2_efg:B",
+      "lime",
+      []
+    ],
+    [
+      "and_done2_abcd:OUT",
+      "and_done2:A",
+      "lime",
+      []
+    ],
+    [
+      "and_done2_efg:OUT",
+      "and_done2:B",
+      "lime",
+      []
+    ],
+    [
+      "mem3g:Q",
+      "not_done3_g:IN",
+      "lime",
+      []
+    ],
+    [
+      "and_done3_ab:OUT",
+      "and_done3_abcd:A",
+      "lime",
+      []
+    ],
+    [
+      "and_done3_cd:OUT",
+      "and_done3_abcd:B",
+      "lime",
+      []
+    ],
+    [
+      "and_done3_ef:OUT",
+      "and_done3_efg:A",
+      "lime",
+      []
+    ],
+    [
+      "not_done3_g:OUT",
+      "and_done3_efg:B",
+      "lime",
+      []
+    ],
+    [
+      "and_done3_abcd:OUT",
+      "and_done3:A",
+      "lime",
+      []
+    ],
+    [
+      "and_done3_efg:OUT",
+      "and_done3:B",
+      "lime",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "done_ff0:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "done_ff1:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "done_ff2:CLK",
+      "white",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "done_ff3:CLK",
+      "white",
+      []
+    ],
+    [
+      "and_done0:OUT",
+      "done_ff0:D",
+      "lime",
+      []
+    ],
+    [
+      "and_done1:OUT",
+      "done_ff1:D",
+      "lime",
+      []
+    ],
+    [
+      "and_done2:OUT",
+      "done_ff2:D",
+      "lime",
+      []
+    ],
+    [
+      "and_done3:OUT",
+      "done_ff3:D",
+      "lime",
+      []
+    ],
+    [
+      "done_ff0:Q",
+      "led_done0:A",
+      "limegreen",
+      []
+    ],
+    [
+      "led_done0:C",
+      "gnd_ldone0:GND",
+      "black",
+      []
+    ],
+    [
+      "done_ff1:Q",
+      "led_done1:A",
+      "limegreen",
+      []
+    ],
+    [
+      "led_done1:C",
+      "gnd_ldone1:GND",
+      "black",
+      []
+    ],
+    [
+      "done_ff2:Q",
+      "led_done2:A",
+      "limegreen",
+      []
+    ],
+    [
+      "led_done2:C",
+      "gnd_ldone2:GND",
+      "black",
+      []
+    ],
+    [
+      "done_ff3:Q",
+      "led_done3:A",
+      "limegreen",
+      []
+    ],
+    [
+      "led_done3:C",
+      "gnd_ldone3:GND",
+      "black",
+      []
+    ],
+    [
+      "r_rst:1",
+      "or_sr0_init:B",
+      "green",
+      []
+    ],
+    [
+      "or_sr0_init:OUT",
+      "sr0:D",
+      "yellow",
+      []
+    ],
+    [
+      "sr5:Q",
+      "or_sr0_init:A",
+      "yellow",
+      []
+    ],
+    [
+      "mem0a:Q",
+      "or_write_0a:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr0:OUT",
+      "or_write_0a:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_0a:OUT",
+      "mx0a:B",
+      "lime",
+      []
+    ],
+    [
+      "mem0b:Q",
+      "or_write_0b:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr1:OUT",
+      "or_write_0b:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_0b:OUT",
+      "mx0b:B",
+      "lime",
+      []
+    ],
+    [
+      "mem0c:Q",
+      "or_write_0c:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr2:OUT",
+      "or_write_0c:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_0c:OUT",
+      "mx0c:B",
+      "lime",
+      []
+    ],
+    [
+      "mem0d:Q",
+      "or_write_0d:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr3:OUT",
+      "or_write_0d:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_0d:OUT",
+      "mx0d:B",
+      "lime",
+      []
+    ],
+    [
+      "mem0e:Q",
+      "or_write_0e:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr4:OUT",
+      "or_write_0e:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_0e:OUT",
+      "mx0e:B",
+      "lime",
+      []
+    ],
+    [
+      "mem0f:Q",
+      "or_write_0f:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr5:OUT",
+      "or_write_0f:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_0f:OUT",
+      "mx0f:B",
+      "lime",
+      []
+    ],
+    [
+      "mem1a:Q",
+      "or_write_1a:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr0:OUT",
+      "or_write_1a:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_1a:OUT",
+      "mx1a:B",
+      "lime",
+      []
+    ],
+    [
+      "mem1b:Q",
+      "or_write_1b:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr1:OUT",
+      "or_write_1b:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_1b:OUT",
+      "mx1b:B",
+      "lime",
+      []
+    ],
+    [
+      "mem1c:Q",
+      "or_write_1c:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr2:OUT",
+      "or_write_1c:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_1c:OUT",
+      "mx1c:B",
+      "lime",
+      []
+    ],
+    [
+      "mem1d:Q",
+      "or_write_1d:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr3:OUT",
+      "or_write_1d:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_1d:OUT",
+      "mx1d:B",
+      "lime",
+      []
+    ],
+    [
+      "mem1e:Q",
+      "or_write_1e:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr4:OUT",
+      "or_write_1e:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_1e:OUT",
+      "mx1e:B",
+      "lime",
+      []
+    ],
+    [
+      "mem1f:Q",
+      "or_write_1f:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr5:OUT",
+      "or_write_1f:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_1f:OUT",
+      "mx1f:B",
+      "lime",
+      []
+    ],
+    [
+      "mem2a:Q",
+      "or_write_2a:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr0:OUT",
+      "or_write_2a:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_2a:OUT",
+      "mx2a:B",
+      "lime",
+      []
+    ],
+    [
+      "mem2b:Q",
+      "or_write_2b:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr1:OUT",
+      "or_write_2b:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_2b:OUT",
+      "mx2b:B",
+      "lime",
+      []
+    ],
+    [
+      "mem2c:Q",
+      "or_write_2c:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr2:OUT",
+      "or_write_2c:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_2c:OUT",
+      "mx2c:B",
+      "lime",
+      []
+    ],
+    [
+      "mem2d:Q",
+      "or_write_2d:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr3:OUT",
+      "or_write_2d:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_2d:OUT",
+      "mx2d:B",
+      "lime",
+      []
+    ],
+    [
+      "mem2e:Q",
+      "or_write_2e:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr4:OUT",
+      "or_write_2e:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_2e:OUT",
+      "mx2e:B",
+      "lime",
+      []
+    ],
+    [
+      "mem2f:Q",
+      "or_write_2f:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr5:OUT",
+      "or_write_2f:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_2f:OUT",
+      "mx2f:B",
+      "lime",
+      []
+    ],
+    [
+      "mem3a:Q",
+      "or_write_3a:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr0:OUT",
+      "or_write_3a:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_3a:OUT",
+      "mx3a:B",
+      "lime",
+      []
+    ],
+    [
+      "mem3b:Q",
+      "or_write_3b:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr1:OUT",
+      "or_write_3b:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_3b:OUT",
+      "mx3b:B",
+      "lime",
+      []
+    ],
+    [
+      "mem3c:Q",
+      "or_write_3c:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr2:OUT",
+      "or_write_3c:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_3c:OUT",
+      "mx3c:B",
+      "lime",
+      []
+    ],
+    [
+      "mem3d:Q",
+      "or_write_3d:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr3:OUT",
+      "or_write_3d:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_3d:OUT",
+      "mx3d:B",
+      "lime",
+      []
+    ],
+    [
+      "mem3e:Q",
+      "or_write_3e:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr4:OUT",
+      "or_write_3e:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_3e:OUT",
+      "mx3e:B",
+      "lime",
+      []
+    ],
+    [
+      "mem3f:Q",
+      "or_write_3f:A",
+      "lime",
+      []
+    ],
+    [
+      "and_lock_sr5:OUT",
+      "or_write_3f:B",
+      "green",
+      []
+    ],
+    [
+      "or_write_3f:OUT",
+      "mx3f:B",
+      "lime",
+      []
+    ],
+    [
+      "mx0a:OUT",
+      "and_done0_ab:A",
+      "lime",
+      []
+    ],
+    [
+      "mx0b:OUT",
+      "and_done0_ab:B",
+      "lime",
+      []
+    ],
+    [
+      "mx0c:OUT",
+      "and_done0_cd:A",
+      "lime",
+      []
+    ],
+    [
+      "mx0d:OUT",
+      "and_done0_cd:B",
+      "lime",
+      []
+    ],
+    [
+      "mx0e:OUT",
+      "and_done0_ef:A",
+      "lime",
+      []
+    ],
+    [
+      "mx0f:OUT",
+      "and_done0_ef:B",
+      "lime",
+      []
+    ],
+    [
+      "mx1a:OUT",
+      "and_done1_ab:A",
+      "lime",
+      []
+    ],
+    [
+      "mx1b:OUT",
+      "and_done1_ab:B",
+      "lime",
+      []
+    ],
+    [
+      "mx1c:OUT",
+      "and_done1_cd:A",
+      "lime",
+      []
+    ],
+    [
+      "mx1d:OUT",
+      "and_done1_cd:B",
+      "lime",
+      []
+    ],
+    [
+      "mx1e:OUT",
+      "and_done1_ef:A",
+      "lime",
+      []
+    ],
+    [
+      "mx1f:OUT",
+      "and_done1_ef:B",
+      "lime",
+      []
+    ],
+    [
+      "mx2a:OUT",
+      "and_done2_ab:A",
+      "lime",
+      []
+    ],
+    [
+      "mx2b:OUT",
+      "and_done2_ab:B",
+      "lime",
+      []
+    ],
+    [
+      "mx2c:OUT",
+      "and_done2_cd:A",
+      "lime",
+      []
+    ],
+    [
+      "mx2d:OUT",
+      "and_done2_cd:B",
+      "lime",
+      []
+    ],
+    [
+      "mx2e:OUT",
+      "and_done2_ef:A",
+      "lime",
+      []
+    ],
+    [
+      "mx2f:OUT",
+      "and_done2_ef:B",
+      "lime",
+      []
+    ],
+    [
+      "mx3a:OUT",
+      "and_done3_ab:A",
+      "lime",
+      []
+    ],
+    [
+      "mx3b:OUT",
+      "and_done3_ab:B",
+      "lime",
+      []
+    ],
+    [
+      "mx3c:OUT",
+      "and_done3_cd:A",
+      "lime",
+      []
+    ],
+    [
+      "mx3d:OUT",
+      "and_done3_cd:B",
+      "lime",
+      []
+    ],
+    [
+      "mx3e:OUT",
+      "and_done3_ef:A",
+      "lime",
+      []
+    ],
+    [
+      "mx3f:OUT",
+      "and_done3_ef:B",
+      "lime",
+      []
+    ],
+    [
+      "and_done0:OUT",
+      "and_done_sel0:A",
+      "lime",
+      []
+    ],
+    [
+      "and_sel0:OUT",
+      "and_done_sel0:B",
+      "cyan",
+      []
+    ],
+    [
+      "and_done1:OUT",
+      "and_done_sel1:A",
+      "lime",
+      []
+    ],
+    [
+      "and_sel1:OUT",
+      "and_done_sel1:B",
+      "cyan",
+      []
+    ],
+    [
+      "and_done2:OUT",
+      "and_done_sel2:A",
+      "lime",
+      []
+    ],
+    [
+      "and_sel2:OUT",
+      "and_done_sel2:B",
+      "cyan",
+      []
+    ],
+    [
+      "and_done3:OUT",
+      "and_done_sel3:A",
+      "lime",
+      []
+    ],
+    [
+      "and_sel3:OUT",
+      "and_done_sel3:B",
+      "cyan",
+      []
+    ],
+    [
+      "and_done_sel0:OUT",
+      "or_done_01:A",
+      "lime",
+      []
+    ],
+    [
+      "and_done_sel1:OUT",
+      "or_done_01:B",
+      "lime",
+      []
+    ],
+    [
+      "and_done_sel2:OUT",
+      "or_done_23:A",
+      "lime",
+      []
+    ],
+    [
+      "and_done_sel3:OUT",
+      "or_done_23:B",
+      "lime",
+      []
+    ],
+    [
+      "or_done_01:OUT",
+      "or_done_active:A",
+      "lime",
+      []
+    ],
+    [
+      "or_done_23:OUT",
+      "or_done_active:B",
+      "lime",
+      []
+    ],
+    [
+      "gnd_mx0g:GND",
+      "mx0g:B",
+      "black",
+      []
+    ],
+    [
+      "gnd_mx1g:GND",
+      "mx1g:B",
+      "black",
+      []
+    ],
+    [
+      "gnd_mx2g:GND",
+      "mx2g:B",
+      "black",
+      []
+    ],
+    [
+      "gnd_mx3g:GND",
+      "mx3g:B",
+      "black",
+      []
+    ],
+    [
+      "gnd_com0:GND",
+      "seg0:COM",
+      "black",
+      []
+    ],
+    [
+      "gnd_com1:GND",
+      "seg1:COM",
+      "black",
+      []
+    ],
+    [
+      "gnd_com2:GND",
+      "seg2:COM",
+      "black",
+      []
+    ],
+    [
+      "gnd_com3:GND",
+      "seg3:COM",
+      "black",
+      []
+    ],
+    [
+      "mem0g:Q",
+      "seg0:G",
+      "lime",
+      []
+    ],
+    [
+      "mem1g:Q",
+      "seg1:G",
+      "lime",
+      []
+    ],
+    [
+      "mem2g:Q",
+      "seg2:G",
+      "lime",
+      []
+    ],
+    [
+      "mem3g:Q",
+      "seg3:G",
+      "lime",
+      []
+    ],
+    [
+      "sr0:Q",
+      "and_disp_0a:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel0:OUT",
+      "and_disp_0a:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem0a:Q",
+      "or_disp_0a:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_0a:OUT",
+      "or_disp_0a:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_0a:OUT",
+      "seg0:A",
+      "lime",
+      []
+    ],
+    [
+      "sr1:Q",
+      "and_disp_0b:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel0:OUT",
+      "and_disp_0b:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem0b:Q",
+      "or_disp_0b:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_0b:OUT",
+      "or_disp_0b:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_0b:OUT",
+      "seg0:B",
+      "lime",
+      []
+    ],
+    [
+      "sr2:Q",
+      "and_disp_0c:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel0:OUT",
+      "and_disp_0c:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem0c:Q",
+      "or_disp_0c:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_0c:OUT",
+      "or_disp_0c:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_0c:OUT",
+      "seg0:C",
+      "lime",
+      []
+    ],
+    [
+      "sr3:Q",
+      "and_disp_0d:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel0:OUT",
+      "and_disp_0d:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem0d:Q",
+      "or_disp_0d:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_0d:OUT",
+      "or_disp_0d:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_0d:OUT",
+      "seg0:D",
+      "lime",
+      []
+    ],
+    [
+      "sr4:Q",
+      "and_disp_0e:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel0:OUT",
+      "and_disp_0e:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem0e:Q",
+      "or_disp_0e:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_0e:OUT",
+      "or_disp_0e:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_0e:OUT",
+      "seg0:E",
+      "lime",
+      []
+    ],
+    [
+      "sr5:Q",
+      "and_disp_0f:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel0:OUT",
+      "and_disp_0f:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem0f:Q",
+      "or_disp_0f:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_0f:OUT",
+      "or_disp_0f:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_0f:OUT",
+      "seg0:F",
+      "lime",
+      []
+    ],
+    [
+      "sr0:Q",
+      "and_disp_1a:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel1:OUT",
+      "and_disp_1a:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem1a:Q",
+      "or_disp_1a:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_1a:OUT",
+      "or_disp_1a:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_1a:OUT",
+      "seg1:A",
+      "lime",
+      []
+    ],
+    [
+      "sr1:Q",
+      "and_disp_1b:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel1:OUT",
+      "and_disp_1b:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem1b:Q",
+      "or_disp_1b:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_1b:OUT",
+      "or_disp_1b:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_1b:OUT",
+      "seg1:B",
+      "lime",
+      []
+    ],
+    [
+      "sr2:Q",
+      "and_disp_1c:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel1:OUT",
+      "and_disp_1c:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem1c:Q",
+      "or_disp_1c:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_1c:OUT",
+      "or_disp_1c:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_1c:OUT",
+      "seg1:C",
+      "lime",
+      []
+    ],
+    [
+      "sr3:Q",
+      "and_disp_1d:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel1:OUT",
+      "and_disp_1d:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem1d:Q",
+      "or_disp_1d:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_1d:OUT",
+      "or_disp_1d:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_1d:OUT",
+      "seg1:D",
+      "lime",
+      []
+    ],
+    [
+      "sr4:Q",
+      "and_disp_1e:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel1:OUT",
+      "and_disp_1e:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem1e:Q",
+      "or_disp_1e:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_1e:OUT",
+      "or_disp_1e:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_1e:OUT",
+      "seg1:E",
+      "lime",
+      []
+    ],
+    [
+      "sr5:Q",
+      "and_disp_1f:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel1:OUT",
+      "and_disp_1f:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem1f:Q",
+      "or_disp_1f:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_1f:OUT",
+      "or_disp_1f:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_1f:OUT",
+      "seg1:F",
+      "lime",
+      []
+    ],
+    [
+      "sr0:Q",
+      "and_disp_2a:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel2:OUT",
+      "and_disp_2a:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem2a:Q",
+      "or_disp_2a:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_2a:OUT",
+      "or_disp_2a:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_2a:OUT",
+      "seg2:A",
+      "lime",
+      []
+    ],
+    [
+      "sr1:Q",
+      "and_disp_2b:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel2:OUT",
+      "and_disp_2b:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem2b:Q",
+      "or_disp_2b:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_2b:OUT",
+      "or_disp_2b:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_2b:OUT",
+      "seg2:B",
+      "lime",
+      []
+    ],
+    [
+      "sr2:Q",
+      "and_disp_2c:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel2:OUT",
+      "and_disp_2c:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem2c:Q",
+      "or_disp_2c:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_2c:OUT",
+      "or_disp_2c:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_2c:OUT",
+      "seg2:C",
+      "lime",
+      []
+    ],
+    [
+      "sr3:Q",
+      "and_disp_2d:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel2:OUT",
+      "and_disp_2d:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem2d:Q",
+      "or_disp_2d:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_2d:OUT",
+      "or_disp_2d:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_2d:OUT",
+      "seg2:D",
+      "lime",
+      []
+    ],
+    [
+      "sr4:Q",
+      "and_disp_2e:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel2:OUT",
+      "and_disp_2e:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem2e:Q",
+      "or_disp_2e:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_2e:OUT",
+      "or_disp_2e:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_2e:OUT",
+      "seg2:E",
+      "lime",
+      []
+    ],
+    [
+      "sr5:Q",
+      "and_disp_2f:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel2:OUT",
+      "and_disp_2f:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem2f:Q",
+      "or_disp_2f:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_2f:OUT",
+      "or_disp_2f:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_2f:OUT",
+      "seg2:F",
+      "lime",
+      []
+    ],
+    [
+      "sr0:Q",
+      "and_disp_3a:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel3:OUT",
+      "and_disp_3a:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem3a:Q",
+      "or_disp_3a:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_3a:OUT",
+      "or_disp_3a:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_3a:OUT",
+      "seg3:A",
+      "lime",
+      []
+    ],
+    [
+      "sr1:Q",
+      "and_disp_3b:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel3:OUT",
+      "and_disp_3b:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem3b:Q",
+      "or_disp_3b:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_3b:OUT",
+      "or_disp_3b:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_3b:OUT",
+      "seg3:B",
+      "lime",
+      []
+    ],
+    [
+      "sr2:Q",
+      "and_disp_3c:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel3:OUT",
+      "and_disp_3c:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem3c:Q",
+      "or_disp_3c:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_3c:OUT",
+      "or_disp_3c:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_3c:OUT",
+      "seg3:C",
+      "lime",
+      []
+    ],
+    [
+      "sr3:Q",
+      "and_disp_3d:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel3:OUT",
+      "and_disp_3d:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem3d:Q",
+      "or_disp_3d:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_3d:OUT",
+      "or_disp_3d:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_3d:OUT",
+      "seg3:D",
+      "lime",
+      []
+    ],
+    [
+      "sr4:Q",
+      "and_disp_3e:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel3:OUT",
+      "and_disp_3e:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem3e:Q",
+      "or_disp_3e:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_3e:OUT",
+      "or_disp_3e:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_3e:OUT",
+      "seg3:E",
+      "lime",
+      []
+    ],
+    [
+      "sr5:Q",
+      "and_disp_3f:A",
+      "yellow",
+      []
+    ],
+    [
+      "and_sel3:OUT",
+      "and_disp_3f:B",
+      "cyan",
+      []
+    ],
+    [
+      "mem3f:Q",
+      "or_disp_3f:A",
+      "lime",
+      []
+    ],
+    [
+      "and_disp_3f:OUT",
+      "or_disp_3f:B",
+      "yellow",
+      []
+    ],
+    [
+      "or_disp_3f:OUT",
+      "seg3:F",
+      "lime",
+      []
+    ],
+    [
+      "cnt0:Q",
+      "and_cnt_max:A",
+      "cyan",
+      []
+    ],
+    [
+      "cnt1:Q",
+      "and_cnt_max:B",
+      "cyan",
+      []
+    ],
+    [
+      "and_cnt_max:OUT",
+      "not_cnt_max:IN",
+      "cyan",
+      []
+    ],
+    [
+      "or_done_active:OUT",
+      "and_cnt_adv_a:B",
+      "lime",
+      []
+    ],
+    [
+      "and_cnt_adv_a:OUT",
+      "and_cnt_adv_b:A",
+      "lime",
+      []
+    ],
+    [
+      "not_cnt_max:OUT",
+      "and_cnt_adv_b:B",
+      "cyan",
+      []
+    ],
+    [
+      "and_cnt_adv_b:OUT",
+      "xor_cnt0:B",
+      "cyan",
+      []
+    ],
+    [
+      "and_cnt_adv_b:OUT",
+      "and_cnt1_en:B",
+      "cyan",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem0a:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem0b:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem0c:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem0d:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem0e:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem0f:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem0g:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem1a:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem1b:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem1c:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem1d:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem1e:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem1f:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem1g:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem2a:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem2b:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem2c:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem2d:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem2e:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem2f:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem2g:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem3a:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem3b:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem3c:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem3d:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem3e:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem3f:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "mem3g:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "cnt0:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "cnt1:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "done_ff0:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "done_ff1:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "done_ff2:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "done_ff3:R",
+      "red",
+      []
+    ],
+    [
+      "clk1:CLK",
+      "btn_lock_ff:CLK",
+      "white",
+      []
+    ],
+    [
+      "r_lock:1",
+      "btn_lock_ff:D",
+      "green",
+      []
+    ],
+    [
+      "r_rst:1",
+      "btn_lock_ff:R",
+      "red",
+      []
+    ],
+    [
+      "btn_lock_ff:Q",
+      "not_btn_lock_prev:IN",
+      "green",
+      []
+    ],
+    [
+      "r_lock:1",
+      "and_btn_pulse:A",
+      "green",
+      []
+    ],
+    [
+      "not_btn_lock_prev:OUT",
+      "and_btn_pulse:B",
+      "green",
+      []
+    ],
+    [
+      "and_btn_pulse:OUT",
+      "and_wr_en0:B",
+      "green",
+      []
+    ],
+    [
+      "and_btn_pulse:OUT",
+      "and_wr_en1:B",
+      "green",
+      []
+    ],
+    [
+      "and_btn_pulse:OUT",
+      "and_wr_en2:B",
+      "green",
+      []
+    ],
+    [
+      "and_btn_pulse:OUT",
+      "and_wr_en3:B",
+      "green",
+      []
+    ],
+    [
+      "and_btn_pulse:OUT",
+      "and_lock_sr0:B",
+      "green",
+      []
+    ],
+    [
+      "and_btn_pulse:OUT",
+      "and_lock_sr1:B",
+      "green",
+      []
+    ],
+    [
+      "and_btn_pulse:OUT",
+      "and_lock_sr2:B",
+      "green",
+      []
+    ],
+    [
+      "and_btn_pulse:OUT",
+      "and_lock_sr3:B",
+      "green",
+      []
+    ],
+    [
+      "and_btn_pulse:OUT",
+      "and_lock_sr4:B",
+      "green",
+      []
+    ],
+    [
+      "and_btn_pulse:OUT",
+      "and_lock_sr5:B",
+      "green",
+      []
+    ],
+    [
+      "and_btn_pulse:OUT",
+      "and_cnt_adv_a:A",
+      "green",
+      []
+    ],
+    [
+      "r_rst:1",
+      "sr1:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "sr2:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "sr3:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "sr4:R",
+      "red",
+      []
+    ],
+    [
+      "r_rst:1",
+      "sr5:R",
+      "red",
+      []
+    ]
+  ],
+  "dependencies": {}
+}

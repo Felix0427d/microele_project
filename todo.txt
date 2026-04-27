@@ -1,9 +1,11 @@
 To Do Microelec :
 
--> Avoir les consignes exactes
--> Finir de setup GitHub et comprendre Verilog
--> Créer design complet
--> Comprendre son principe
+-> Avoir les consignes exactes OK!
+-> Finir de setup GitHub et comprendre Verilog OK!
+-> Créer design complet OK!
+-> Comprendre son principe OK!
+-> Ecrire intro du rapport OK!
+
 -> Découper le design et tester les sous sections
 -> Tester le design complet
 -> Ecrire le rapport, avec commentaires des design et interprétations
