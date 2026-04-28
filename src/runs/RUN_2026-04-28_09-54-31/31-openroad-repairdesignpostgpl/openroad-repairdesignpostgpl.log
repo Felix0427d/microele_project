@@ -1,0 +1,76 @@
+Reading timing models for corner nom_tt_025C_1v80…
+Reading timing library for the 'nom_tt_025C_1v80' corner at '/home/felix/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib'…
+Reading timing models for corner nom_ff_n40C_1v95…
+Reading timing library for the 'nom_ff_n40C_1v95' corner at '/home/felix/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib'…
+Reading timing models for corner nom_ss_100C_1v60…
+Reading timing library for the 'nom_ss_100C_1v60' corner at '/home/felix/.ciel/ciel/sky130/versions/0fe599b2afb6708d281543108caf8310912f54af/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib'…
+Reading OpenROAD database at '/mnt/c/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/src/runs/RUN_2026-04-28_09-54-31/27-openroad-globalplacement/mini_light_up_game.odb'…
+Reading design constraints file at '/nix/store/p32knifc9l2cvqzrxkf9hcjphzkhn19d-python3-3.11.9-env/lib/python3.11/site-packages/librelane/scripts/base.sdc'…
+[INFO] Using clock clk…
+[INFO] Setting output delay to: 5
+[INFO] Setting input delay to: 5
+[INFO] Setting load to: 0.033442
+[INFO] Setting clock uncertainty to: 0.25
+[INFO] Setting clock transition to: 0.1499999999999999944488848768742172978818416595458984375
+[INFO] Setting timing derate to: 5%
+[INFO] Setting RC values…
+[INFO RSZ-0027] Inserted 2 input buffers.
+[INFO RSZ-0028] Inserted 24 output buffers.
+[INFO RSZ-0058] Using max wire length 6335um.
+Iteration | Resized | Buffers | Nets repaired | Remaining
+---------------------------------------------------------
+        0 |       0 |       0 |             0 |       173
+       10 |       9 |       0 |             0 |       163
+       20 |      19 |       0 |             0 |       153
+       30 |      29 |       0 |             0 |       143
+       40 |      39 |       0 |             0 |       133
+       50 |      49 |       0 |             0 |       123
+       60 |      59 |       0 |             0 |       113
+       70 |      69 |       0 |             0 |       103
+       80 |      79 |       0 |             0 |        93
+       90 |      87 |       3 |             3 |        83
+      100 |     100 |       7 |             5 |        73
+      110 |     110 |       7 |             5 |        63
+      120 |     120 |       7 |             5 |        53
+      130 |     125 |       7 |             5 |        43
+      140 |     125 |       7 |             5 |        33
+      150 |     125 |       7 |             5 |        23
+      160 |     125 |       7 |             5 |        13
+      170 |     129 |      11 |             6 |         3
+    final |     129 |      11 |             6 |         0
+---------------------------------------------------------
+[INFO RSZ-0034] Found 1 slew violations.
+[INFO RSZ-0035] Found 5 fanout violations.
+[INFO RSZ-0038] Inserted 11 buffers in 6 nets.
+[INFO RSZ-0039] Resized 129 instances.
+[INFO RSZ-0042] Inserted 4 tie sky130_fd_sc_hd__conb_1 instances.
+Placement Analysis
+---------------------------------
+total displacement        548.9 u
+average displacement        2.1 u
+max displacement            9.0 u
+original HPWL            2221.6 u
+legalized HPWL           2761.1 u
+delta HPWL                   24 %
+
+[INFO DPL-0020] Mirrored 67 instances
+[INFO DPL-0021] HPWL before            2761.1 u
+[INFO DPL-0022] HPWL after             2696.5 u
+[INFO DPL-0023] HPWL delta               -2.3 %
+[INFO] Setting RC values…
+Setting global connections for newly added cells…
+[INFO] Setting global connections...
+Updating metrics…
+Cell type report:                       Count       Area
+  Fill cell                                42     157.65
+  Tap cell                                 46      57.56
+  Timing Repair Buffer                     37     192.68
+  Inverter                                 38     142.64
+  Sequential cell                          36     920.88
+  Multi-Input combinational cell           66     530.51
+  Total                                   265    2001.92
+Writing OpenROAD database to '/mnt/c/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/src/runs/RUN_2026-04-28_09-54-31/31-openroad-repairdesignpostgpl/mini_light_up_game.odb'…
+Writing netlist to '/mnt/c/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/src/runs/RUN_2026-04-28_09-54-31/31-openroad-repairdesignpostgpl/mini_light_up_game.nl.v'…
+Writing powered netlist to '/mnt/c/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/src/runs/RUN_2026-04-28_09-54-31/31-openroad-repairdesignpostgpl/mini_light_up_game.pnl.v'…
+Writing layout to '/mnt/c/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/src/runs/RUN_2026-04-28_09-54-31/31-openroad-repairdesignpostgpl/mini_light_up_game.def'…
+Writing timing constraints to '/mnt/c/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/src/runs/RUN_2026-04-28_09-54-31/31-openroad-repairdesignpostgpl/mini_light_up_game.sdc'…

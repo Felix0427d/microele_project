@@ -1,0 +1,8 @@
+- cell: mini_light_up_game
+  inout: []
+  input: []
+  output:
+  - seg0[6]
+  - seg1[6]
+  - seg2[6]
+  - seg3[6]

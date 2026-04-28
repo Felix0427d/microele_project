@@ -1,6 +1,6 @@
 {
-  "DESIGN_NAME": "button_game",
-  "VERILOG_FILES": ["dir::chip.v", "dir::testbench.v"],
-  "CLOCK_PERIOD": 25,
-  "CLOCK_PORT": "clk"
+  "DESIGN_NAME": "mini_light_up_game",
+  "VERILOG_FILES": ["chip.v"],
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 25
 }

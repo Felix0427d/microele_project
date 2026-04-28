@@ -1,0 +1,5 @@
+`verilator_config
+lint_off -rule DECLFILENAME
+lint_off -rule EOFNEWLINE
+lint_off -rule UNDRIVEN -file "/mnt/c/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/src/runs/RUN_2026-04-28_09-54-31/tmp/a3204c97df7b4f9a99df4e9373483866.bb.v"
+lint_off -rule UNUSEDSIGNAL -file "/mnt/c/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/src/runs/RUN_2026-04-28_09-54-31/tmp/a3204c97df7b4f9a99df4e9373483866.bb.v"
