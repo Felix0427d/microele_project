@@ -9,8 +9,7 @@ module tb_mini_light_up_game;
     reg reset;
     reg btn;
 
-    wire [6:0] segments;
-    wire [3:0] digit_sel;
+    wire [6:0] seg0, seg1, seg2, seg3;
 
     // =========================
     // DUT (Device Under Test)
@@ -19,14 +18,26 @@ module tb_mini_light_up_game;
         .clk(clk),
         .reset(reset),
         .btn(btn),
-        .segments(segments),
-        .digit_sel(digit_sel)
+        .seg0(seg0),
+        .seg1(seg1),
+        .seg2(seg2),
+        .seg3(seg3)
     );
 
     // =========================
-    // Horloge (100 MHz)
+    // Horloge (40 MHz — CLOCK_PERIOD = 25 ns)
     // =========================
-    always #5 clk = ~clk;
+    always #12.5 clk = ~clk;
+
+    // Tâche utilitaire : impulsion bouton d'1 cycle
+    task press_btn;
+        begin
+            @(negedge clk);
+            btn = 1;
+            @(negedge clk);
+            btn = 0;
+        end
+    endtask
 
     // =========================
     // Dump VCD (GTKWave)
@@ -34,7 +45,7 @@ module tb_mini_light_up_game;
     initial begin
         $dumpfile("wave.vcd");
         $dumpvars(0, tb_mini_light_up_game);
-        $dumpvars(1, uut); // optionnel mais utile
+        $dumpvars(1, uut);
     end
 
     // =========================
@@ -42,37 +53,48 @@ module tb_mini_light_up_game;
     // =========================
     initial begin
         // Init
-        clk = 0;
+        clk   = 0;
         reset = 1;
-        btn = 0;
+        btn   = 0;
 
-        // Reset
-        #20;
+        // Reset (2 cycles)
+        @(negedge clk); @(negedge clk);
         reset = 0;
-        $display("Sortie du reset...");
+        $display("t=%0t | Sortie du reset", $time);
 
-        // Observation
-        #100;
+        // Laisser le curseur tourner quelques cycles
+        repeat(10) @(negedge clk);
 
-        // Test 1
-        $display("Appui bouton - Test 1");
-        btn = 1;
-        #20;
-        btn = 0;
+        // --- Digit 0 : verrouiller les 6 segments un par un ---
+        $display("t=%0t | Remplissage digit 0", $time);
+        repeat(6) begin
+            press_btn;
+            repeat(6) @(negedge clk); // laisser le curseur avancer
+        end
 
-        #200;
+        // --- Digit 1 ---
+        $display("t=%0t | Remplissage digit 1", $time);
+        repeat(6) begin
+            press_btn;
+            repeat(6) @(negedge clk);
+        end
 
-        // Test 2
-        $display("Appui bouton - Test 2");
-        btn = 1;
-        #20;
-        btn = 0;
+        // --- Digit 2 ---
+        $display("t=%0t | Remplissage digit 2", $time);
+        repeat(6) begin
+            press_btn;
+            repeat(6) @(negedge clk);
+        end
 
-        // Observation multiplexage
-        $display("Observation affichage...");
-        #1000;
+        // --- Digit 3 ---
+        $display("t=%0t | Remplissage digit 3", $time);
+        repeat(6) begin
+            press_btn;
+            repeat(6) @(negedge clk);
+        end
 
-        $display("Fin simulation");
+        repeat(20) @(negedge clk);
+        $display("t=%0t | Fin simulation", $time);
         $finish;
     end
 
@@ -80,8 +102,8 @@ module tb_mini_light_up_game;
     // Monitoring console
     // =========================
     initial begin
-        $monitor("t=%0t | digit_sel=%b | segments=%b | clk=%b",
-                 $time, digit_sel, segments, clk);
+        $monitor("t=%0t | seg0=%7b seg1=%7b seg2=%7b seg3=%7b",
+                 $time, seg0, seg1, seg2, seg3);
     end
 
 endmodule
