@@ -1,11 +1,40 @@
-To Do Microelec :
+To do:
 
--> Avoir les consignes exactes OK!
--> Finir de setup GitHub et comprendre Verilog OK!
--> Créer design complet OK!
--> Comprendre son principe OK!
--> Ecrire intro du rapport OK!
+=== RAPPORT LATEX ===
 
--> Découper le design et tester les sous sections
--> Tester le design complet
--> Ecrire le rapport, avec commentaires des design et interprétations
+[ ] Section 3 — Block by block analysis
+    -> Expliquer chaque sous-module du Verilog :
+       - Curseur (registre à décalage circulaire 1-hot)
+       - Détection front montant bouton (btn_pulse)
+       - Compteur 2 bits (cnt)
+       - Mémoires par digit (mem0..mem3)
+       - Drapeaux done_ff
+       - Overlay curseur sur la sortie
+
+[ ] Section 4 — Compléter les valeurs manquantes dans les rapports OpenLane
+    -> Clock Period & Setup Slack   : runs/.../54-openroad-stapostpnr/
+    -> Hold Slack                   : idem
+    -> Power (internal/switching/leakage) : runs/.../54-openroad-stapostpnr/ ou 55-irdropreport/
+    -> DRC violations               : runs/.../62-magic-drc/ ou 63-klayout-drc/
+    -> LVS status                   : logs Magic
+    -> Nombre de cellules / types   : runs/.../06-yosys-synthesis/
+
+[ ] Section 4.4 — Visual Results
+    -> Capture KLayout : layout complet (placement + routing)
+    -> Capture OpenLane GUI : clock tree mis en évidence
+    -> Capture : power ring VDD/VSS
+    -> Ajouter commentaires visuels sur chaque image
+
+[ ] Section 5.1 — GTKWave
+    -> Vérifier que la simulation est correcte (seg0..seg3 = 0111111 en fin)
+    -> Prendre capture GTKWave annotée
+    -> Remplacer l'image placeholder par la bonne capture
+
+[ ] Section 5.2 — Testing FPGA
+    -> À compléter après le test FPGA
+    -> Implémenter le test FPGA
+
+[ ] Section 6 et concluion 
+    -> Faire du blabla
+
+
