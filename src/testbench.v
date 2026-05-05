@@ -65,32 +65,41 @@ module tb_mini_light_up_game;
         // Laisser le curseur tourner quelques cycles
         repeat(10) @(negedge clk);
 
-        // --- Digit 0 : verrouiller les 6 segments un par un ---
+        // --- Digit 0 : verrouiller les 6 segments (7 cycles/appui → couvre les 6 positions) ---
         $display("t=%0t | Remplissage digit 0", $time);
         repeat(6) begin
             press_btn;
-            repeat(6) @(negedge clk); // laisser le curseur avancer
+            repeat(5) @(negedge clk); // 2+5=7 cycles/appui ; 7 mod 6=1 → toutes les positions
         end
+        // Appui de validation : done_ff[0]=1 → cnt avance de 0 à 1
+        press_btn;
+        repeat(5) @(negedge clk);
 
         // --- Digit 1 ---
         $display("t=%0t | Remplissage digit 1", $time);
         repeat(6) begin
             press_btn;
-            repeat(6) @(negedge clk);
+            repeat(5) @(negedge clk);
         end
+        // Appui de validation : cnt avance de 1 à 2
+        press_btn;
+        repeat(5) @(negedge clk);
 
         // --- Digit 2 ---
         $display("t=%0t | Remplissage digit 2", $time);
         repeat(6) begin
             press_btn;
-            repeat(6) @(negedge clk);
+            repeat(5) @(negedge clk);
         end
+        // Appui de validation : cnt avance de 2 à 3
+        press_btn;
+        repeat(5) @(negedge clk);
 
         // --- Digit 3 ---
         $display("t=%0t | Remplissage digit 3", $time);
         repeat(6) begin
             press_btn;
-            repeat(6) @(negedge clk);
+            repeat(5) @(negedge clk);
         end
 
         repeat(20) @(negedge clk);
