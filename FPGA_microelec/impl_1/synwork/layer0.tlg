@@ -1,0 +1,12 @@
+@N: CD630 :"C:\Users\felix\Documents\Master_1ECAM\microelec\projet_microelec\src\chip.vhd":25:7:25:24|Synthesizing work.mini_light_up_game.rtl.
+Post processing for work.mini_light_up_game.rtl
+Running optimization stage 1 on mini_light_up_game .......
+Finished optimization stage 1 on mini_light_up_game (CPU Time 0h:00m:00s, Memory Used current: 152MB peak: 154MB)
+Running optimization stage 2 on mini_light_up_game .......
+Finished optimization stage 2 on mini_light_up_game (CPU Time 0h:00m:00s, Memory Used current: 152MB peak: 154MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: C:\Users\felix\Documents\Master_1ECAM\microelec\projet_microelec\FPGA_microelec\impl_1\synwork\layer0.duruntime
+
+

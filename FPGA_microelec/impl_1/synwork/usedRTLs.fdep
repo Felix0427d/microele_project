@@ -1,0 +1,5 @@
+#List of actual used RTLs.
+
+File                                                                                   Type     IN_PROJECT/INCLUDED/LIBRARY
+
+"C:\Users\felix\Documents\Master_1ECAM\microelec\projet_microelec\src\chip.vhd"        vhdl                      IN PROJECT

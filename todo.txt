@@ -1,8 +1,9 @@
 To do:
+[ ]Section 4. - Faire une mini explication du code du testbench
 
 [ ] Section 5.2 — Testing FPGA
-    -> Implémenter le code fpga pour le test (HDL)
-    -> Le téléverser sur la carte 
+    -> Implémenter le code fpga pour le test (HDL) OK
+    -> Le téléverser sur la carte et tester
     -> Rapport à compléter après le test FPGA avec oscilloscope (pas oubier de prendre des toff)
     
 [ ] Section 6 et concluion 

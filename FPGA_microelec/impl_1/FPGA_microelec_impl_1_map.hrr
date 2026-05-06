@@ -1,0 +1,10 @@
+---------------------------------------------------
+Report for cell mini_light_up_game
+   Instance path: mini_light_up_game
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  LUT4	        127        100.0
+                               LUTGATE	        105        100.0
+                                LUTCCU	         22        100.0
+                                 IOBUF	         27        100.0
+                                PFUREG	         61        100.0

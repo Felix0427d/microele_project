@@ -1,0 +1,69 @@
+
+Copyright (C) 1994-2025 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: W-2025.03LR-SP1
+Install: C:\lscc\radiant\2025.2\synpbase
+OS: Windows 10 or later
+Hostname: PCDEFÉLIX
+
+Implementation : impl_1
+
+#### START OF AREA REPORT #####[
+
+Part:			ICE40UP5KSG48I-6 (Lattice)
+
+----------------------------------------------------------------------------------
+########   Utilization report for  Top level view:   mini_light_up_game   ########
+==================================================================================
+
+SEQUENTIAL ELEMENTS
+Name            Total elements     Utilization     Notes
+--------------------------------------------------------
+FD1P3DZ         60                                      
+FD1P3BZ         1                                       
+                                                        
+Total FLOPS     61                 100 %                
+========================================================
+Total SEQUENTIAL ELEMENTS in the block mini_light_up_game:	61 (31.12 % Utilization)
+
+
+COMBINATIONAL LOGIC
+Name                   Total elements     Utilization     Notes
+---------------------------------------------------------------
+LUT4                   95                                      
+CCU2_B                 11                                      
+                                                               
+Total LUTS             95                 100 %                
+Total CARRY CHAINS     11                 100 %                
+===============================================================
+Total COMBINATIONAL LOGIC in the block mini_light_up_game:	106 (54.08 % Utilization)
+
+
+IO PADS
+Name         Total elements     Utilization     Notes
+-----------------------------------------------------
+IB           3                                       
+OB           24                                      
+                                                     
+TOTAL IO     27                 100 %                
+=====================================================
+Total IO PADS in the block mini_light_up_game:	27 (13.78 % Utilization)
+
+
+BLACKBOX
+Name                Total elements     Utilization     Notes
+------------------------------------------------------------
+VLO                 1                                       
+VHI                 1                                       
+                                                            
+Total BLACK BOX     2                  100 %                
+============================================================
+Total BLACKBOX in the block mini_light_up_game:	2 (1.02 % Utilization)
+
+
+##### END OF AREA REPORT #####]
+

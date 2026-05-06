@@ -1,0 +1,478 @@
+# Wed May  6 15:24:52 2026
+
+
+Copyright (C) 1994-2025 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: W-2025.03LR-SP1
+Install: C:\lscc\radiant\2025.2\synpbase
+OS: Windows 10 or later
+Hostname: PCDEFÉLIX
+
+Implementation : impl_1
+Synopsys Lattice Technology Mapper, Version map202503latsp1, Build 093R, Built Dec  2 2025 10:00:10, @
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 186MB peak: 186MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF667 |Clock conversion disabled. (Command "set_option -fix_gated_and_generated_clocks 0" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 188MB peak: 203MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 188MB peak: 203MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 189MB peak: 203MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 191MB peak: 203MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 249MB peak: 249MB)
+
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 252MB peak: 252MB)
+
+
+Starting area decomp  (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 252MB peak: 254MB)
+
+@N: MO231 :"c:\users\felix\documents\master_1ecam\microelec\projet_microelec\src\chip.vhd":94:8:94:9|Found counter in view:work.mini_light_up_game(rtl) instance div_cnt[20:0] 
+
+Finished area decomp  (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 254MB peak: 254MB)
+
+
+Starting factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 254MB peak: 255MB)
+
+
+Finished factoring (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 255MB peak: 255MB)
+
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 255MB peak: 256MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 256MB peak: 257MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 256MB peak: 257MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 256MB peak: 258MB)
+
+
+Finished preparing to map (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 257MB peak: 258MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 262MB peak: 262MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:03s		    -4.98ns		 113 /        59
+   2		0h:00m:03s		    -4.98ns		 113 /        59
+@N: FX271 :"c:\users\felix\documents\master_1ecam\microelec\projet_microelec\src\chip.vhd":94:8:94:9|Replicating instance ce (in view: work.mini_light_up_game(rtl)) with 12 loads 1 time to improve timing.
+Timing driven replication report
+Added 1 Registers via timing driven replication
+Added 1 LUTs via timing driven replication
+
+   3		0h:00m:03s		    -4.98ns		 114 /        60
+
+@N: FX271 :"c:\users\felix\documents\master_1ecam\microelec\projet_microelec\src\chip.vhd":185:8:185:9|Replicating instance cnt[1] (in view: work.mini_light_up_game(rtl)) with 12 loads 1 time to improve timing.
+Timing driven replication report
+Added 1 Registers via timing driven replication
+Added 0 LUTs via timing driven replication
+
+   4		0h:00m:03s		    -2.21ns		 116 /        61
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 262MB peak: 263MB)
+
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 262MB peak: 264MB)
+
+
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 263MB peak: 264MB)
+
+
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 263MB peak: 264MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:03s; CPU Time elapsed 0h:00m:03s; Memory used current: 216MB peak: 264MB)
+
+Writing Analyst data base C:\Users\felix\Documents\Master_1ECAM\microelec\projet_microelec\FPGA_microelec\impl_1\synwork\FPGA_microelec_impl_1_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 263MB peak: 264MB)
+
+Writing Verilog Simulation files
+
+Writing scf file... (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 264MB peak: 265MB)
+
+@N: BW103 |The default time unit for the Synopsys Constraint File (SDC or FDC) is 1ns.
+@N: BW107 |Synopsys Constraint File capacitance units using default value of 1pF 
+
+Finished Writing Verilog Simulation files (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 264MB peak: 266MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:04s; CPU Time elapsed 0h:00m:04s; Memory used current: 264MB peak: 266MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 264MB peak: 266MB)
+
+@W: MT420 |Found inferred clock mini_light_up_game|clk with period 5.00ns. Please declare a user-defined clock on port clk.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Wed May  6 15:24:57 2026
+#
+
+
+Top view:               mini_light_up_game
+Requested Frequency:    200.0 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    C:\lscc\radiant\2025.2\scripts\tcl\flow\radiant_synplify_vars.tcl
+                       
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -9.973
+
+                           Requested     Estimated     Requested     Estimated                Clock        Clock                                     
+Starting Clock             Frequency     Frequency     Period        Period        Slack      Type         Group                                     
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+mini_light_up_game|clk     200.0 MHz     NA            5.000         NA            NA         inferred     Inferred_clkgroup_0, Inferred_clkgroup_0_1
+System                     200.0 MHz     66.8 MHz      5.000         14.973        -9.973     system       system_clkgroup                           
+=====================================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks            |    rise  to  rise    |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+---------------------------------------------------------------------------------------------------------
+Starting  Ending  |  constraint  slack   |  constraint  slack  |  constraint  slack  |  constraint  slack
+---------------------------------------------------------------------------------------------------------
+System    System  |  5.000       -9.973  |  No paths    -      |  No paths    -      |  No paths    -    
+=========================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                Starting                                          Arrival           
+Instance        Reference     Type        Pin     Net             Time        Slack 
+                Clock                                                               
+------------------------------------------------------------------------------------
+btn_ibuf        System        IB          O       btn_c           0.000       -9.973
+ce_fast         System        FD1P3DZ     Q       ce_fast         0.796       -5.578
+cnt[0]          System        FD1P3DZ     Q       cnt[0]          0.796       -5.547
+cnt[1]          System        FD1P3DZ     Q       cnt[1]          0.796       -5.454
+div_cnt[16]     System        FD1P3DZ     Q       div_cnt[16]     0.796       -5.382
+div_cnt[17]     System        FD1P3DZ     Q       div_cnt[17]     0.796       -5.309
+div_cnt[0]      System        FD1P3DZ     Q       div_cnt[0]      0.796       -5.278
+div_cnt[18]     System        FD1P3DZ     Q       div_cnt[18]     0.796       -5.278
+div_cnt[1]      System        FD1P3DZ     Q       div_cnt[1]      0.796       -5.206
+div_cnt[20]     System        FD1P3DZ     Q       div_cnt[20]     0.796       -5.185
+====================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+               Starting                                      Required           
+Instance       Reference     Type        Pin     Net         Time         Slack 
+               Clock                                                            
+--------------------------------------------------------------------------------
+done_ff[1]     System        FD1P3DZ     D       N_120_i     4.845        -9.973
+cnt[0]         System        FD1P3DZ     D       N_122_i     4.845        -8.012
+done_ff[0]     System        FD1P3DZ     D       N_70_i      4.845        -8.012
+done_ff[2]     System        FD1P3DZ     D       N_121_i     4.845        -8.012
+done_ff[3]     System        FD1P3DZ     D       N_28_i      4.845        -8.012
+mem1[0]        System        FD1P3DZ     D       mem1_4      4.845        -7.940
+mem1[1]        System        FD1P3DZ     D       mem1_3      4.845        -7.940
+mem1[2]        System        FD1P3DZ     D       mem1_2      4.845        -7.940
+mem1[3]        System        FD1P3DZ     D       mem1_1      4.845        -7.940
+mem1[4]        System        FD1P3DZ     D       mem1_0      4.845        -7.940
+================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      5.000
+    - Setup time:                            0.155
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         4.845
+
+    - Propagation time:                      14.818
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (critical) :                     -9.973
+
+    Number of logic level(s):                4
+    Starting point:                          btn_ibuf / O
+    Ending point:                            done_ff[1] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising] on pin CK
+
+Instance / Net                    Pin      Pin               Arrival      No. of    
+Name                  Type        Name     Dir     Delay     Time         Fan Out(s)
+------------------------------------------------------------------------------------
+btn_ibuf              IB          O        Out     0.000     0.000 f      -         
+btn_c                 Net         -        -       6.717     -            3         
+ce_fast_RNIPGLPL      LUT4        A        In      -         6.717 f      -         
+ce_fast_RNIPGLPL      LUT4        Z        Out     0.661     7.378 r      -         
+ce_fast_RNIPGLPL      Net         -        -       1.371     -            1         
+btn_prev_RNIPCH3O     LUT4        B        In      -         8.749 r      -         
+btn_prev_RNIPCH3O     LUT4        Z        Out     0.589     9.339 r      -         
+N_127                 Net         -        -       1.371     -            8         
+done_ff_RNO_0[1]      LUT4        A        In      -         10.710 r     -         
+done_ff_RNO_0[1]      LUT4        Z        Out     0.661     11.371 r     -         
+N_208                 Net         -        -       1.371     -            1         
+done_ff_RNO[1]        LUT4        A        In      -         12.742 r     -         
+done_ff_RNO[1]        LUT4        Z        Out     0.569     13.311 f     -         
+N_120_i               Net         -        -       1.507     -            1         
+done_ff[1]            FD1P3DZ     D        In      -         14.818 f     -         
+====================================================================================
+Total path delay (propagation time + setup) of 14.973 is 2.636(17.6%) logic and 12.337(82.4%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 2: 
+      Requested Period:                      5.000
+    - Setup time:                            0.155
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         4.845
+
+    - Propagation time:                      12.806
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -7.961
+
+    Number of logic level(s):                3
+    Starting point:                          btn_ibuf / O
+    Ending point:                            cnt[0] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising] on pin CK
+
+Instance / Net                    Pin      Pin               Arrival      No. of    
+Name                  Type        Name     Dir     Delay     Time         Fan Out(s)
+------------------------------------------------------------------------------------
+btn_ibuf              IB          O        Out     0.000     0.000 f      -         
+btn_c                 Net         -        -       6.717     -            3         
+ce_fast_RNIPGLPL      LUT4        A        In      -         6.717 f      -         
+ce_fast_RNIPGLPL      LUT4        Z        Out     0.661     7.378 r      -         
+ce_fast_RNIPGLPL      Net         -        -       1.371     -            1         
+btn_prev_RNIPCH3O     LUT4        B        In      -         8.749 r      -         
+btn_prev_RNIPCH3O     LUT4        Z        Out     0.589     9.339 r      -         
+N_127                 Net         -        -       1.371     -            8         
+cnt_RNO[0]            LUT4        B        In      -         10.710 r     -         
+cnt_RNO[0]            LUT4        Z        Out     0.589     11.299 r     -         
+N_122_i               Net         -        -       1.507     -            1         
+cnt[0]                FD1P3DZ     D        In      -         12.806 r     -         
+====================================================================================
+Total path delay (propagation time + setup) of 12.961 is 1.995(15.4%) logic and 10.966(84.6%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 3: 
+      Requested Period:                      5.000
+    - Setup time:                            0.155
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         4.845
+
+    - Propagation time:                      12.785
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -7.940
+
+    Number of logic level(s):                3
+    Starting point:                          btn_ibuf / O
+    Ending point:                            mem1[5] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising] on pin CK
+
+Instance / Net                    Pin      Pin               Arrival      No. of    
+Name                  Type        Name     Dir     Delay     Time         Fan Out(s)
+------------------------------------------------------------------------------------
+btn_ibuf              IB          O        Out     0.000     0.000 f      -         
+btn_c                 Net         -        -       6.717     -            3         
+ce_fast_RNIPGLPL      LUT4        A        In      -         6.717 f      -         
+ce_fast_RNIPGLPL      LUT4        Z        Out     0.661     7.378 r      -         
+ce_fast_RNIPGLPL      Net         -        -       1.371     -            1         
+btn_prev_RNIPCH3O     LUT4        B        In      -         8.749 r      -         
+btn_prev_RNIPCH3O     LUT4        Z        Out     0.589     9.339 r      -         
+N_127                 Net         -        -       1.371     -            8         
+mem1_RNO[5]           LUT4        A        In      -         10.710 r     -         
+mem1_RNO[5]           LUT4        Z        Out     0.569     11.278 f     -         
+mem1                  Net         -        -       1.507     -            1         
+mem1[5]               FD1P3DZ     D        In      -         12.785 f     -         
+====================================================================================
+Total path delay (propagation time + setup) of 12.940 is 1.974(15.3%) logic and 10.966(84.7%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 4: 
+      Requested Period:                      5.000
+    - Setup time:                            0.155
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         4.845
+
+    - Propagation time:                      12.785
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -7.940
+
+    Number of logic level(s):                3
+    Starting point:                          btn_ibuf / O
+    Ending point:                            mem1[4] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising] on pin CK
+
+Instance / Net                    Pin      Pin               Arrival      No. of    
+Name                  Type        Name     Dir     Delay     Time         Fan Out(s)
+------------------------------------------------------------------------------------
+btn_ibuf              IB          O        Out     0.000     0.000 f      -         
+btn_c                 Net         -        -       6.717     -            3         
+ce_fast_RNIPGLPL      LUT4        A        In      -         6.717 f      -         
+ce_fast_RNIPGLPL      LUT4        Z        Out     0.661     7.378 r      -         
+ce_fast_RNIPGLPL      Net         -        -       1.371     -            1         
+btn_prev_RNIPCH3O     LUT4        B        In      -         8.749 r      -         
+btn_prev_RNIPCH3O     LUT4        Z        Out     0.589     9.339 r      -         
+N_127                 Net         -        -       1.371     -            8         
+mem1_RNO[4]           LUT4        A        In      -         10.710 r     -         
+mem1_RNO[4]           LUT4        Z        Out     0.569     11.278 f     -         
+mem1_0                Net         -        -       1.507     -            1         
+mem1[4]               FD1P3DZ     D        In      -         12.785 f     -         
+====================================================================================
+Total path delay (propagation time + setup) of 12.940 is 1.974(15.3%) logic and 10.966(84.7%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+Path information for path number 5: 
+      Requested Period:                      5.000
+    - Setup time:                            0.155
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         4.845
+
+    - Propagation time:                      12.785
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 -7.940
+
+    Number of logic level(s):                3
+    Starting point:                          btn_ibuf / O
+    Ending point:                            mem1[3] / D
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising] on pin CK
+
+Instance / Net                    Pin      Pin               Arrival      No. of    
+Name                  Type        Name     Dir     Delay     Time         Fan Out(s)
+------------------------------------------------------------------------------------
+btn_ibuf              IB          O        Out     0.000     0.000 f      -         
+btn_c                 Net         -        -       6.717     -            3         
+ce_fast_RNIPGLPL      LUT4        A        In      -         6.717 f      -         
+ce_fast_RNIPGLPL      LUT4        Z        Out     0.661     7.378 r      -         
+ce_fast_RNIPGLPL      Net         -        -       1.371     -            1         
+btn_prev_RNIPCH3O     LUT4        B        In      -         8.749 r      -         
+btn_prev_RNIPCH3O     LUT4        Z        Out     0.589     9.339 r      -         
+N_127                 Net         -        -       1.371     -            8         
+mem1_RNO[3]           LUT4        A        In      -         10.710 r     -         
+mem1_RNO[3]           LUT4        Z        Out     0.569     11.278 f     -         
+mem1_1                Net         -        -       1.507     -            1         
+mem1[3]               FD1P3DZ     D        In      -         12.785 f     -         
+====================================================================================
+Total path delay (propagation time + setup) of 12.940 is 1.974(15.3%) logic and 10.966(84.7%) route.
+Path delay compensated for clock skew. Clock skew is added to clock-to-out value, and is subtracted from setup time value
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 265MB peak: 266MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 265MB peak: 266MB)
+
+---------------------------------------
+Resource Usage Report for mini_light_up_game 
+
+Mapping to part: ice40up5ksg48i-6
+Cell usage:
+CCU2_B          11 uses
+FD1P3BZ         1 use
+FD1P3DZ         60 uses
+VHI             1 use
+VLO             1 use
+LUT4            95 uses
+
+I/O ports: 27
+I/O primitives: 27
+IB             3 uses
+OB             24 uses
+
+I/O Register bits:                  0
+Register bits not including I/Os:   61 of 5280 (1%)
+Total load per clock:
+   mini_light_up_game|clk: 1
+
+@S |Mapping Summary:
+Total  LUTs: 95 (1%)
+
+Distribution of All Consumed LUTs = LUT4 
+Distribution of All Consumed LUTs 95 = 95 
+
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:05s; CPU Time elapsed 0h:00m:05s; Memory used current: 128MB peak: 266MB)
+
+Process took 0h:00m:06s realtime, 0h:00m:05s cputime
+# Wed May  6 15:24:58 2026
+
+###########################################################]

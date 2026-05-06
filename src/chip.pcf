@@ -1,0 +1,71 @@
+# =============================================================================
+# chip.pcf  —  Contraintes de brochage pour le pico-ice (iCE40UP5K)
+# Projet : mini_light_up_game
+#
+# Modifier les numéros de broche selon ton câblage réel.
+# Règle : le segment g (bit 6) est TOUJOURS à '0', connecte-le au GND
+# physiquement sur ton montage (ou laisse la patte d'anode flottante).
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Horloge système : 12 MHz — broche ICE_35_G0 (global clock buffer)
+# -----------------------------------------------------------------------------
+set_io -nowarn clk    35
+
+# -----------------------------------------------------------------------------
+# Reset actif HAUT — broche libre, ex. PMOD2B IO4 (broche 18)
+# Met un bouton entre cette broche et 3V3, avec pull-down 10k vers GND.
+# -----------------------------------------------------------------------------
+set_io -nowarn reset  18
+
+# -----------------------------------------------------------------------------
+# Bouton LOCK actif HAUT — ICE_PB (broche 10) est ACTIF BAS sur pico-ice.
+# Utiliser une broche PMOD avec un bouton externe actif HAUT.
+# Option B choisie ici : PMOD2B IO3 (broche 23) avec bouton vers 3V3 + 10k GND.
+# -----------------------------------------------------------------------------
+set_io -nowarn btn    23
+
+# -----------------------------------------------------------------------------
+# seg0 — Afficheur 0  (PMOD0A + 2 pins de PMOD0B)
+#   bit [0] = a,  [1] = b,  [2] = c,  [3] = d,  [4] = e,  [5] = f
+#   bit [6] = g → toujours '0', câbler la patte g de l'afficheur au GND
+# -----------------------------------------------------------------------------
+set_io -nowarn seg0[0]   4   # PMOD0A IO1  — segment a
+set_io -nowarn seg0[1]   2   # PMOD0A IO2  — segment b
+set_io -nowarn seg0[2]  47   # PMOD0A IO3  — segment c
+set_io -nowarn seg0[3]  45   # PMOD0A IO4  — segment d
+set_io -nowarn seg0[4]   3   # PMOD0B IO1  — segment e
+set_io -nowarn seg0[5]  48   # PMOD0B IO2  — segment f
+# segment g (bit 6) supprimé du port — câbler la patte g de l'afficheur au GND
+
+# -----------------------------------------------------------------------------
+# seg1 — Afficheur 1  (2 pins PMOD0B + PMOD1A)
+# -----------------------------------------------------------------------------
+set_io -nowarn seg1[0]  46   # PMOD0B IO3  — segment a
+set_io -nowarn seg1[1]  44   # PMOD0B IO4  — segment b
+set_io -nowarn seg1[2]  43   # PMOD1A IO1  — segment c
+set_io -nowarn seg1[3]  38   # PMOD1A IO2  — segment d
+set_io -nowarn seg1[4]  34   # PMOD1A IO3  — segment e
+set_io -nowarn seg1[5]  31   # PMOD1A IO4  — segment f
+
+# -----------------------------------------------------------------------------
+# seg2 — Afficheur 2  (PMOD1B + 2 pins PMOD2A)
+# -----------------------------------------------------------------------------
+set_io -nowarn seg2[0]  36   # PMOD1B IO2  — segment a
+set_io -nowarn seg2[1]  32   # PMOD1B IO3  — segment b
+set_io -nowarn seg2[2]  28   # PMOD1B IO4  — segment c
+set_io -nowarn seg2[3]  27   # PMOD2A IO1  — segment d
+set_io -nowarn seg2[4]  25   # PMOD2A IO2  — segment e
+set_io -nowarn seg2[5]  21   # PMOD2A IO3  — segment f
+
+# -----------------------------------------------------------------------------
+# seg3 — Afficheur 3  (2 pins PMOD2A + PMOD2B)
+# Note : PMOD2A/2B sont partagés avec le RP2040 — si tu utilises le RP2040
+# en même temps, préfère déplacer ces signaux vers les PMODs 0/1.
+# -----------------------------------------------------------------------------
+set_io -nowarn seg3[0]  26   # PMOD2B IO1  — segment a
+set_io -nowarn seg3[1]  20   # PMOD2B IO3  — segment b
+set_io -nowarn seg3[2]  42   # PMOD1B IO1  — segment c  (broche libérée)
+set_io -nowarn seg3[3]  19   # PMOD2A IO4  — segment d  (broche libérée)
+set_io -nowarn seg3[4]  11   # ICE_11      — segment e
+set_io -nowarn seg3[5]   9   # ICE_9       — segment f

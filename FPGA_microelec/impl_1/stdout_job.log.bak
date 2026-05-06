@@ -1,0 +1,104 @@
+{
+"Synplify Pro (R) Job Log" : {
+	"Date" : "11:49:50    06-May-2026",
+	"Working Directory" : "C:/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/FPGA_microelec/impl_1",
+	"Install" : "C:/lscc/radiant/2025.2/synpbase"
+},
+"hdl_info_gen" :{
+   "Job Flow" : "Sequential",
+   "Start Time" : "11:49:09",
+   "Runtime" : "01s",
+   "Executable Run Time" : "01s",
+   "hdl_info_gen" : {
+      "executable" : "bin64/c_vhdl.exe",
+      "Run Directory" : "C:/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/FPGA_microelec/impl_1",
+      "Run State" : "Complete",
+      "Return Code" : "0",
+      "Run Success" : "yes",
+      "Run Start Time" : "11:49:09",
+      "Run Time" : "01s",
+      "Exe Run Time" : "01s",
+      "Memory Usage" : "-",
+      "Up-to-date (run skipped)" : "no"
+   }
+},
+"impl_1" :{
+   "Job Flow" : "Sequential",
+   "Start Time" : "11:49:10",
+   "Runtime" : "40s",
+   "Executable Run Time" : "38s",
+   "synthesis" : {
+      "Job Flow" : "Sequential",
+      "Start Time" : "11:49:10",
+      "Runtime" : "40s",
+      "Executable Run Time" : "38s",
+      "compile" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "11:49:10",
+         "Runtime" : "20s",
+         "Executable Run Time" : "18s",
+         "compile_flow" : {
+            "Job Flow" : "Sequential",
+            "Start Time" : "11:49:10",
+            "Runtime" : "09s",
+            "Executable Run Time" : "08s",
+            "compiler" : {
+               "executable" : "bin64/c_hdl.exe",
+               "Run Directory" : "C:/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/FPGA_microelec/impl_1",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Run Success" : "yes",
+               "Run Start Time" : "11:49:10",
+               "Run Time" : "08s",
+               "Exe Run Time" : "07s",
+               "max_parallel_jobs" : "4",
+               "Memory Usage" : "-",
+               "Up-to-date (run skipped)" : "no"
+            },
+            "multi_srs_gen" : {
+               "executable" : "bin64/syn_nfilter.exe",
+               "Run Directory" : "C:/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/FPGA_microelec/impl_1",
+               "Run State" : "Complete",
+               "Return Code" : "0",
+               "Run Success" : "yes",
+               "Run Start Time" : "11:49:18",
+               "Run Time" : "01s",
+               "Exe Run Time" : "01s",
+               "Memory Usage" : "-",
+               "Up-to-date (run skipped)" : "no"
+            }
+         },
+         "premap" : {
+            "executable" : "bin64/m_generic.exe",
+            "Run Directory" : "C:/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/FPGA_microelec/impl_1",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Run Success" : "yes",
+            "Run Start Time" : "11:49:19",
+            "Run Time" : "11s",
+            "Exe Run Time" : "10s",
+            "Memory Usage" : "-",
+            "Up-to-date (run skipped)" : "no"
+         }
+      },
+      "map" : {
+         "Job Flow" : "Sequential",
+         "Start Time" : "11:49:30",
+         "Runtime" : "20s",
+         "Executable Run Time" : "20s",
+         "fpga_mapper" : {
+            "executable" : "bin64/m_generic.exe",
+            "Run Directory" : "C:/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/FPGA_microelec/impl_1",
+            "Run State" : "Complete",
+            "Return Code" : "1",
+            "Run Success" : "yes",
+            "Run Start Time" : "11:49:30",
+            "Run Time" : "20s",
+            "Exe Run Time" : "20s",
+            "Memory Usage" : "-",
+            "Up-to-date (run skipped)" : "no"
+         }
+      }
+   }
+}
+}

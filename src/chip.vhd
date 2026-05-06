@@ -9,7 +9,8 @@
 --           (ICE_PB = broche 10 est actif BAS sur pico-ice → inverser dans le .pcf)
 -- Sorties :
 --   seg0..3 : 4 afficheurs 7 segments séparés, common cathode, actif HAUT
---             bit [6]=g (toujours 0), [5]=f, [4]=e, [3]=d, [2]=c, [1]=b, [0]=a
+--             bit [5]=f, [4]=e, [3]=d, [2]=c, [1]=b, [0]=a
+--             segment g (toujours 0) → câbler directement au GND sur le montage
 --
 -- Diviseur d'horloge : 12 MHz / 2^DIV_BITS ≈ 5,7 Hz par pas de curseur
 --   → une rotation complète (6 positions) en ~1 seconde
@@ -26,10 +27,10 @@ entity mini_light_up_game is
         clk   : in  std_logic;
         reset : in  std_logic;
         btn   : in  std_logic;
-        seg0  : out std_logic_vector(6 downto 0);
-        seg1  : out std_logic_vector(6 downto 0);
-        seg2  : out std_logic_vector(6 downto 0);
-        seg3  : out std_logic_vector(6 downto 0)
+        seg0  : out std_logic_vector(5 downto 0);
+        seg1  : out std_logic_vector(5 downto 0);
+        seg2  : out std_logic_vector(5 downto 0);
+        seg3  : out std_logic_vector(5 downto 0)
     );
 end entity mini_light_up_game;
 
@@ -204,12 +205,14 @@ begin
 
     -- =========================================================================
     -- 7. Sorties : overlay du curseur sur le digit actif uniquement
-    --    seg[6] = g = toujours '0'  (segment du milieu, jamais allumé)
     --    seg[5:0] = mémoire OR (curseur masqué si digit sélectionné)
+    --    segment g (bit 6) toujours '0' → câbler la patte g de l'afficheur au GND
     -- =========================================================================
-    seg0 <= '0' & (mem0 or (cursor and sel0_v));
-    seg1 <= '0' & (mem1 or (cursor and sel1_v));
-    seg2 <= '0' & (mem2 or (cursor and sel2_v));
-    seg3 <= '0' & (mem3 or (cursor and sel3_v));
+    -- Sorties inversées : afficheurs common-anode (actif BAS)
+    -- '0' allume le segment, '1' l'éteint
+    seg0 <= not (mem0 or (cursor and sel0_v));
+    seg1 <= not (mem1 or (cursor and sel1_v));
+    seg2 <= not (mem2 or (cursor and sel2_v));
+    seg3 <= not (mem3 or (cursor and sel3_v));
 
 end architecture rtl;

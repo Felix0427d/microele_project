@@ -1,0 +1,1 @@
+project -fileorder "C:/lscc/radiant/2025.2/ip/pmi/pmi_iCE40UP.vhd" "C:/Users/felix/Documents/Master_1ECAM/microelec/projet_microelec/src/chip.vhd" "C:/lscc/radiant/2025.2/cae_library/synthesis/vhdl/iCE40UP.vhd" 

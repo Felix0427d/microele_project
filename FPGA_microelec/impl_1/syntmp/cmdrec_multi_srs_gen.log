@@ -1,0 +1,7 @@
+C:\lscc\radiant\2025.2\synpbase\bin64\syn_nfilter.exe  -link  -top  mini_light_up_game  -multisrs  C:\Users\felix\Documents\Master_1ECAM\microelec\projet_microelec\FPGA_microelec\impl_1\synwork\FPGA_microelec_impl_1_comp.srs  -osyn  C:\Users\felix\Documents\Master_1ECAM\microelec\projet_microelec\FPGA_microelec\impl_1\synwork\FPGA_microelec_impl_1_mult.srs  -log  C:\Users\felix\Documents\Master_1ECAM\microelec\projet_microelec\FPGA_microelec\impl_1\synlog\FPGA_microelec_impl_1_multi_srs_gen.srr 
+relcom:..\..\..\..\..\..\..\..\..\lscc\radiant\2025.2\synpbase\bin64\syn_nfilter.exe -link -top mini_light_up_game -multisrs ..\synwork\FPGA_microelec_impl_1_comp.srs -osyn ..\synwork\FPGA_microelec_impl_1_mult.srs -log ..\synlog\FPGA_microelec_impl_1_multi_srs_gen.srr
+rc:0 success:1 runtime:1
+file:..\synwork\fpga_microelec_impl_1_comp.srs|io:i|time:1778073884|size:3793|exec:0|csum:975C2A9DECA39E4001EECF8100DA6637
+file:..\synwork\fpga_microelec_impl_1_mult.srs|io:o|time:1778073886|size:3525|exec:0|csum:
+file:..\synlog\fpga_microelec_impl_1_multi_srs_gen.srr|io:o|time:1778073886|size:1201|exec:0|csum:
+file:..\..\..\..\..\..\..\..\..\lscc\radiant\2025.2\synpbase\bin64\syn_nfilter.exe|io:i|time:1762883177|size:10805248|exec:1|csum:852D19A9663831A0E2C4EB49CF2B6DEC

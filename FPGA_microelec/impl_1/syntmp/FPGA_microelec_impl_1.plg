@@ -1,0 +1,17 @@
+@P:  Worst Slack : -9.973
+@P:  mini_light_up_game|clk - Estimated Frequency : NA
+@P:  mini_light_up_game|clk - Requested Frequency : 200.0 MHz
+@P:  mini_light_up_game|clk - Estimated Period : NA
+@P:  mini_light_up_game|clk - Requested Period : 5.000
+@P:  mini_light_up_game|clk - Slack : NA
+@P:  System - Estimated Frequency : 66.8 MHz
+@P:  System - Requested Frequency : 200.0 MHz
+@P:  System - Estimated Period : 14.973
+@P:  System - Requested Period : 5.000
+@P:  System - Slack : -9.973
+@P: mini_light_up_game Part : ice40up5ksg48i-6
+@P: mini_light_up_game I/O primitives : 27
+@P: mini_light_up_game I/O Register bits : 0
+@P: mini_light_up_game Register bits (Non I/O) : 61 (1%)
+@P: mini_light_up_game Total Luts : 95 of 5280 (1%)
+@P:  CPU Time : 0h:00m:05s
