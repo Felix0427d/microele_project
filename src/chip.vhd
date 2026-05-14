@@ -1,23 +1,3 @@
--- =============================================================================
--- chip.vhd  —  Jeu des 4 zéros
--- Traduction VHDL fidèle de chip.v pour Lattice Radiant / iCE40UP5K
---
--- Entrées :
---   clk   : 12 MHz (pico-ice : broche 35, ICE_35_G0)
---   reset : actif HAUT
---   btn   : bouton LOCK, actif HAUT, front montant détecté en interne
---           (ICE_PB = broche 10 est actif BAS sur pico-ice → inverser dans le .pcf)
--- Sorties :
---   seg0..3 : 4 afficheurs 7 segments séparés, common cathode, actif HAUT
---             bit [5]=f, [4]=e, [3]=d, [2]=c, [1]=b, [0]=a
---             segment g (toujours 0) → câbler directement au GND sur le montage
---
--- Diviseur d'horloge : 12 MHz / 2^DIV_BITS ≈ 5,7 Hz par pas de curseur
---   → une rotation complète (6 positions) en ~1 seconde
---   Modifier DIV_BITS pour changer la vitesse :
---     18 → ~46 Hz (très rapide)   21 → ~5.7 Hz   23 → ~1.4 Hz (lent)
--- =============================================================================
-
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
@@ -203,13 +183,6 @@ begin
         end if;
     end process p_regs;
 
-    -- =========================================================================
-    -- 7. Sorties : overlay du curseur sur le digit actif uniquement
-    --    seg[5:0] = mémoire OR (curseur masqué si digit sélectionné)
-    --    segment g (bit 6) toujours '0' → câbler la patte g de l'afficheur au GND
-    -- =========================================================================
-    -- Sorties inversées : afficheurs common-anode (actif BAS)
-    -- '0' allume le segment, '1' l'éteint
     seg0 <= not (mem0 or (cursor and sel0_v));
     seg1 <= not (mem1 or (cursor and sel1_v));
     seg2 <= not (mem2 or (cursor and sel2_v));
